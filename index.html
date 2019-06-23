@@ -172,7 +172,7 @@
 					<section>
 						<h4>NeoPixel Demo</h4>
 						<div>
-							<p>NeoPixels Demo</p>
+							<p>NeoPixels video & code demo goes here.</p>
 						</div>
 					</section>
 					<section>
@@ -186,12 +186,12 @@
 				</section>
 				<section id='communication'>
 					<section>
-						<h2>Components</h2>
+						<h2>Communicating with the NodeMCUs</h2>
 					</section>
 					<section>
 						<h4>Architecture</h4>
 						<div>
-							<img alt="Architecture" />
+							<img alt="Architecture diagram goes here" />
 						</div>
 					</section>
 					<section>
@@ -202,45 +202,107 @@
 							<li>Raspberry Pi Zero W: 4 Nos.</li>
 							<li>Raspberry Pi Cluster Hat v2.2: 1 No.</li>
 							<li>Raspberry Pi 7 Inch Touch Screen</li>
+							<li>Raspberry Pi 3 4 Node Microphone Array</li>
 							<li>WS2818B Addressable RGB LED Strips: 10 meter</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Communicating with the ESP8266: The MQTT Protocol</h4>
+						<ul>
+							<li>A Lightweight Protocol for <span class="code-snippet">&lt;buzzword&gt;IoT&lt;/buzzword&gt;</span></li>
+							<li>Supported by RabbitMQ using the <span class="code-snippet">rabbitmq_mqtt</span> plugin <a href="https://www.rabbitmq.com/mqtt.html"><i class="fa fa-link"></i></a></li>
+							<li>Use the mqtt library in MicroPython, queue names should contain slashes.</li>
+							<li><b>Protip:</b> Use the <span class="code-snippet">amqp.topic</span> exchange and replace slashes in the mqtt queue name with dots.</li>
 						</ul>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Commu</h2>
+						<h2>The Catalogue</h2>
 					</section>
-					<section></section>
-					<section></section>
-					<section></section>
+					<section>
+						<h4>Flask</h4>
+						<ul>
+							<li>Lightweight and completely customizable.</li>
+							<li>Flask_Ask supports Alexa.</li>
+							<li>Easy to hack around with.</li>
+							<li>sqlite3 + flask_sqlalchemy</li>
+							<li>Flask_Ask module to interface with Alexa</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Telegram</h4>
+						<ul>
+							<li>Easy Chat API to send ISBN for Indexing</li>
+							<li>Easy search UI, use title to search</li>
+						</ul>
+					</section>
+					<section>
+					</section>
 				</section>
+				<section id="demo">
+					<section>
+						<h2>Demo Videos</h2>
+					</section>
+					<section>
+						<h4>Initial Troubles</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
+					</section>
+					<section>
+						<h4>What's Capacitence, Doc?</h4>
+						<iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
+					</section>
+					<section>
+						<h4>Improving Control</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
+					</section>
+					<section>
+						<h4>Final (WIP)</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1"></iframe>
+					</section>
 
-			<section>
-				<h2>
-					Questions
-				</h2>
-				<p>
-					<i class='fa fa-twitter fa-fw'></i>
-					<a href="https://twitter.com/user/vinay87">Vinay Keerthi</a></p>
-			</section>
-			<section>
-				<h2>Links</h2>
-				<ul id="references">
-					<li><a href="">Blogpost</a> detailing the project</li>
-					<li><a href="">Gitlab</a> Repositories</li>
-					<li><a href="">NodeMCU @ Amazon</a></li>
-					<li><a href="">Raspberry Pi Cluster Hat</a></li>
-					<li><a href="">MQTT on RabbitMQ</a></li>
-					<li><a href="">Pika AMQP Library</a></li>
-					<li><a href="">MicroPython Documentation</a></li>
-					<li><a href="">NeoPixels Documentation</a></li>
-					<li><a href="">Docker Swarm</a></li>
-					<li><a href="">Flask-Ask</a> Alexa Library</li>
-					<li><a href="">Telegram API</a></li>
-					<li><a href="">Asciinema</a></li>
-					<li><a href="">Reveal.js</a></li>
-				</ul>
-			</section>
+				</section>
+				<section>
+					<section>
+						<h2>Future Upgrades</h2>
+					</section>
+					<section>
+						<h4>Improved Voice-UI</h4>
+						<ul>
+							<li>Send photo of book / ISBN code via telegram for indexing.</li>
+							<li>Rasa for NLP</li>
+							<li>Analyse reading pattern and suggest next books</li>
+							<li>Improved Telegram bot that lets me purchase books via Amazon</li>
+							<li>Bookshelf metrics: visualize read-count, days since last read stats with LEDs!</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>
+						Questions
+					</h2>
+					<p>
+						<i class='fa fa-twitter fa-fw'></i>
+						<a href="https://twitter.com/user/vinay87">Vinay Keerthi</a></p>
+				</section>
+				<section>
+					<h2>Links</h2>
+					<ul id="references">
+						<li><a href="https://stonecharioteer.gitlab.io/blog/snakes_on_a_bookshelf.html">Blogpost</a> detailing the project</li>
+						<li><a href="https://gitlab.com/bookshelfie">Gitlab</a> Repositories</li>
+						<li><a href="https://www.nodemcu.com/index_en.html">NodeMCU</a></li>
+						<li><a href="https://clusterhat.com/">Raspberry Pi Cluster Hat</a></li>
+						<li><a href="https://www.rabbitmq.com/mqtt.html">MQTT on RabbitMQ</a> | <a href="" target="_blank">Dockerfile</a></li>
+						<li><a href="https://pika.readthedocs.io/en/stable/">Pika AMQP Library</a></li>
+						<li><a href="https://docs.micropython.org/en/latest/esp8266/quickref.html">MicroPython Documentation</a></li>
+						<li><a href="https://docs.micropython.org/en/latest/esp8266/tutorial/neopixel.html">NeoPixels Documentation</a></li>
+						<li><a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a></li>
+						<li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
+						<li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
+						<li><a href="https://asciinema.org/">Asciinema</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
+					</ul>
+				</section>
 			</div>
 
 		</div>
