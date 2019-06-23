@@ -1,0 +1,49 @@
+img {
+    border: 0px !important;
+}
+
+.img-grid {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+    justify-content: center;
+}
+
+img.bookshelves {
+    margin: 1.2rem!important;
+    height: 400px;
+    font-size: 18px;
+}
+
+
+div.logo-stack {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content:  center;
+}
+
+div.logo-stack > div.logo, div.logo-stack > img.logo {
+    height: 64px ;
+    margin: 1rem !important;
+    border: 0;
+}
+
+div.logo-stack > img.logo.major {
+    height: 128px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize !important;
+}
+
+span.uPy {
+    text-transform: none !important;
+}
