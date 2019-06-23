@@ -2,6 +2,7 @@ img {
     border: 0px !important;
 }
 
+
 .img-grid {
     display: flex;
     margin: 0;
@@ -46,4 +47,92 @@ h1, h2, h3, h4, h5, h6 {
 
 span.uPy {
     text-transform: none !important;
+}
+
+
+li {
+    font-size: 0.7em !important;
+}
+
+p.tiny {
+    font-size: 1.5rem !important;
+}
+
+p.tiny#about-me {
+    color: black;
+    text-transform: uppercase;
+}
+
+div#about-me-links {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 30%;
+    justify-content: center;
+    align-content: center
+}
+
+div#about-me-links > a { 
+    text-decoration: none;
+    background-color: #000;
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+p.tiny#about-me > a > i{ 
+    color: #f15;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+
+div.content-wip {
+    display: block;
+    height: 200px;
+    width: 50%;
+    background-color: #444;
+    border: 1px dotted black;
+    text-transform: capitalize;
+}
+
+div.content-wip:before { 
+    content: "Work in Progress"
+}
+
+span.code-snippet {
+    background-color: #eee;
+    padding: 0 0.4rem;
+    font-weight: bold;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+div.title {
+    padding: 2rem;
+    height: 30vh;
+    background-image: url("../img/books_bg.jpeg");
+    background-size: cover;
+    box-shadow: 1rem 0.7rem 0.5rem;
+}
+
+div.title.image-container > h1.main-title {
+    text-transform: uppercase;
+    color: #000;
+    background-color: white;
+    opacity: 1;
+    letter-spacing: 1.2rem;
+    mix-blend-mode: screen;
+}
+
+div.title.image-container > h4.main-subtitle {
+    text-transform: capitalize;
+    color: #000;
+    background-color: #fff;
+    mix-blend-mode: screen;
+    padding: 1rem;
 }
