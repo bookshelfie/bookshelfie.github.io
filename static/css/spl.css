@@ -137,3 +137,16 @@ div.title.image-container > h4.main-subtitle {
     mix-blend-mode: screen;
     padding: 1rem;
 }
+
+
+section.wip  p.wip {
+    background-color: #ddd !important;
+    color: black;
+    font-size: 0.8rem;
+}
+
+p.wip > date { 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8 rem;
+    
+}
