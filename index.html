@@ -1,167 +1,164 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Shelfie: The Bookshelf Search Engine</title>\
-		<meta name="description" content="How to make a Bookshelf Search Engine" />
-		<meta name="author" content="Vinay Keerthi" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <title>Shelfie: The Bookshelf Search Engine</title>
+        <meta name="description" content="How to make a Bookshelf Search Engine" />
+        <meta name="author" content="Vinay Keerthi" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="static/font-awesome/4.7.0/css/font-awesome.css">
-		<link rel="stylesheet" href="static/asciinema-player/2.4.1/asciinema-player.css">
-		
-		<link rel="stylesheet" href="static/revealjs/css/reset.css" />
-		<link rel="stylesheet" href="static/revealjs/css/reveal.css" />
-		<link rel="stylesheet" href="static/revealjs/css/theme/serif.css" id="theme" />
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="static/revealjs/lib/css/monokai.css" />
-		<link rel="stylesheet" href="static/css/spl.css" />
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'static/revealjs/css/print/pdf.css' : 'static/revealjs/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<!--[if lt IE 9]>
-		<script src="static/revealjs/lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <link rel="stylesheet" href="static/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="static/asciinema-player/2.4.1/asciinema-player.css">
 
-	<body>
-		<div class="reveal">
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<div class="title image-container">
-						<h1 class="main-title">SHELFIE</h1>
-						<h4 class="main-subtitle">
-							Building a Physical Inventory Search Engine</h4>
-					</div>
-					<p class='tiny' id="about-me">
-						Vinay Keerthi
-					</p>
-					<p class='tiny'>
-						PyCon 2019 Chennai
-					</p>
-					<hr >
-					<div id="about-me-links">
-						<a href="https://gitlab.com/user/stonecharioteer">
-							<i class="fa fa-gitlab fa fa-fw"></i> stonecharioteer
-						</a><a href="https://stonecharioteer.gitlab.io">
-							<i class="fa fa-book fa-fw"></i> stonecharioteer.gitlab.io
-						</a>
-					</div>
-				</section>
-				<section class="wip">
-					<h2>Note</h2>
-					<p class="wip">Sections of this presentation are still WIP. I'll be finishing
-						these as I go on. Last update: <date>2019-06-23</date>
-					</p>
-				</section>
-				<section id='intro'>
-					<section>
-						<h2>Why?</h2>
-						<p>Why do you want a Bookshelf that runs Python?</p>
-					</section>
-					<section>
-						<h4>I Own Over a 1000 Books</h4>
-						<div class="img-grid">
-							<img class='bookshelves' src="static/img/bookshelves/001.jpg" alt="">
-							<img class='bookshelves' src="static/img/bookshelves/002.jpg" alt="">
-							<img class='bookshelves' src="static/img/bookshelves/004.jpg" alt="">
-							<img class='bookshelves' src="static/img/bookshelves/005.jpg" alt="">
-						</div>
-					</section>
-					<section>
-						<h4>Seriously, it's hard to keep count.</h4>
-						<div class="img-grid">
-							<img class='bookshelves' src="static/img/bookshelves/006.jpg" alt="">
-							<img class='bookshelves' src="static/img/bookshelves/008.jpg" alt="">
-						</div>
-					</section>
-					<section>
-						<h4>I've Tried it All.</h4>
-						<ul>
-							<li>Notebooks: Too troublesome to carry</li>
-							<li>Spreadsheets: Easy at first, too difficult to sync.</li>
-							<li>GoodReads: Annoying API</li>
-							<li>LibraryThing: Free account has a limit of 250 books.</li>
-						</ul>
-					</section>
-					<section>
-						<h4>So, I decided to making something to help.</h4>
-						<div class="img-grid">
-							<div class="showoff">ESP8266 Collection, Raspberry Pi collection</div>
-							<div class="showoff">Telegram bot screenshot</div>
-						</div>
-					</section>
-					<section>
-						<h4>I ended up with an over-engineered solution</h4>
-						<div class="logo-stack">
-							<img src="static/img/logo/python.svg" alt="Python Logo" class="logo major">
-							<img src="static/img/logo/micropython.png" alt="" class="logo major">
-							<img src="static/img/logo/raspberry_pi.png" alt="Raspberry Pi Logo" class="logo major">
-							<img src="static/img/logo/docker.png" alt="Docker" class="logo">
-							<img src="static/img/logo/rabbitmq.png" alt="RabbitMQ" class="logo">
-							<img src="static/img/logo/git.png" alt="Git" class="logo">
-							<img src="static/img/logo/gitlab.png" alt="GitLab" class="logo">
-						</div>
-					</section>
-				</section>
+        <link rel="stylesheet" href="static/revealjs/css/reset.css" />
+        <link rel="stylesheet" href="static/revealjs/css/reveal.css" />
+        <link rel="stylesheet" href="static/revealjs/css/theme/serif.css" id="theme" />
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="static/revealjs/lib/css/monokai.css" />
+        <link rel="stylesheet" href="static/css/spl.css" />
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'static/revealjs/css/print/pdf.css' : 'static/revealjs/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!--[if lt IE 9]>
+        <script src="static/revealjs/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-				<section id='micropython-rgb'>
-					<section>
-						<h2>Prelude: Micropython</h2>
-					</section>
-					<section>
-						<h4>What is <span id='uPy'>MicroPython</span>?</h4>
-						<ul>
-							<li>Python for Microcontrollers</li>
-							<li>Tiny, includes a subset of CPython's libraries</li>
-							<li>Runs off chips with 256kB space and 16k RAM</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Getting Started with <span class="uPy">MicroPython</span></h4>
-						<ul>
-							<li>Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
-							<li>Flash MicroPython firmware</li>
-							<li>Profit???</li>
-						</ul>
-					</section>
-					<section>
-						<h4>ESP8266 (NODEMCU)</h4>
-						<div class='img-grid'>
-							<img src="static/img/hardware/esp8266_001.jpg" alt="ESP8266" class="bookshelves">
-							<img src="static/img/hardware/esp8266_003.jpg" alt="ESP8266" class="bookshelves">
-						</div>
-					</section>
-					<section>
-						<h4>ESP8266 (NodeMCU)</h4>
-						<ul>
-							<li>Runs Lua out of the box</li>
-							<li>Can install MicroPython firmware</li>
-							<li>Supports WiFi</li>
-							<li>Costs ~140 Rs</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Flashing MicroPython</h4>
-						<ul>
-							<li>Download Suitable Firmware</li>
-							<li>Setup Virtual Environment</li>
-							<li><span class='code-snippet'>pip install esptool</span></li>
-							<li>Add current user to <span class="code-snippet">tty</span> group (linux)</li>
-							<li>Flash firmware</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Getting Up and Running</h4>
-						<asciinema-player
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <div class="title image-container">
+                        <h1 class="main-title">Shelfie</h1>
+                        <h4 class="main-subtitle">
+                            Building a Physical Inventory Search Engine</h4>
+                    </div>
+                    <p class='tiny' id="about-me">
+                        Vinay Keerthi
+                    </p>
+                    <p class='tiny'>
+                            Sr. Software Engineer, <i class="fa fa-cc-visa"></i>
+                    </p>
+                    <hr >
+                    <div id="about-me-links">
+                        <a href="https://gitlab.com/user/stonecharioteer">
+                            <i class="fa fa-github fa-fw"></i> stonecharioteer
+                        </a><a href="https://stonecharioteer.gitlab.io">
+                            <i class="fa fa-book fa-fw"></i> stonecharioteer.gitlab.io
+                        </a>
+                    </div>
+                </section>
+                <section id='intro'>
+                    <section>
+                        <h2>Why?</h2>
+                        <p>Why do you want a Bookshelf that runs Python?</p>
+                    </section>
+                    <section>
+                        <h4>I Own Over a 1000 Books</h4>
+                        <div class="img-grid">
+                            <img class='bookshelves' src="static/img/bookshelves/001.jpg" alt="">
+                            <img class='bookshelves' src="static/img/bookshelves/002.jpg" alt="">
+                            <img class='bookshelves' src="static/img/bookshelves/004.jpg" alt="">
+                            <img class='bookshelves' src="static/img/bookshelves/005.jpg" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Seriously, it's hard to keep count.</h4>
+                        <div class="img-grid">
+                            <img class='bookshelves' src="static/img/bookshelves/006.jpg" alt="">
+                            <img class='bookshelves' src="static/img/bookshelves/008.jpg" alt="">
+                        </div>
+                    </section>
+                    <section>
+                        <h4>I've Tried it All.</h4>
+                        <ul>
+                            <li>Notebooks: Too troublesome to carry</li>
+                            <li>Spreadsheets: Easy at first, too difficult to sync.</li>
+                            <li>Goodreads: Annoying API</li>
+                            <li>LibraryThing: Free account has a limit of 250 books.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>So, I decided to making something to help.</h4>
+                        <div class="img-grid">
+
+                        </div>
+                    </section>
+                    <section id="fragments">
+
+                        <h4 class="fragments">I ended up with a <b>slightly</b> over-engineered solution</h4>
+                        <span class="fragment">
+                            <div class="logo-stack">
+                                <img src="static/img/logo/python.svg" alt="Python Logo" class="logo major">
+                                <img src="static/img/logo/micropython.png" alt="" class="logo major">
+                                <img src="static/img/logo/mosquitto.png" alt="Mosquitto" class="logo">
+                                <img src="static/img/logo/raspberry_pi.png" alt="Raspberry Pi Logo" class="logo major">
+                                <img src="static/img/logo/postgresql.png" alt="Postgresql" class="logo">
+                                <img src="static/img/logo/git.png" alt="Git" class="logo">
+                                <img src="static/img/logo/debian.jpg" alt="debian" class="logo">
+                            </div>
+                        </span>
+                    </section>
+                </section>
+                <section id='micropython-rgb'>
+                    <section>
+                        <h2>Prelude: Micropython</h2>
+                        <img src="static/img/logo/micropython.png" height="300" />
+                    </section>
+                    <section>
+                        <h4>What is <span id='uPy'>MicroPython</span>?</h4>
+                        <ul>
+                            <li>Python for Microcontrollers</li>
+                            <li><b>Seriously,</b> you can code Python on a $2 board.</li>
+                            <li>Tiny, includes a subset of CPython's libraries</li>
+                            <li>Runs off chips with 256kB space and 16k RAM</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Getting Started with MicroPython</h4>
+                        <ul>
+                            <li>Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
+                            <li>Flash MicroPython firmware</li>
+                            <li>???</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>ESP8266 (NODEMCU)</h4>
+                        <div class='img-grid'>
+                            <img src="static/img/hardware/esp8266_001.jpg" alt="ESP8266" class="bookshelves">
+                            <img src="static/img/hardware/esp8266_003.jpg" alt="ESP8266" class="bookshelves">
+                        </div>
+                    </section>
+                    <section>
+                        <h4>ESP8266 (NodeMCU)</h4>
+                        <ul>
+                            <li>Runs Lua out of the box</li>
+                            <li>Can install MicroPython firmware</li>
+                            <li>Supports WiFi</li>
+                            <li>Costs ~140 Rs</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Flashing MicroPython</h4>
+                        <ul>
+                            <li>Download Suitable Firmware</li>
+                            <li>Setup Virtual Environment</li>
+                            <li><span class='code-snippet'>pip install esptool</span></li>
+                            <li>Add current user to <span class="code-snippet">dialout</span> group (linux)</li>
+                            <li>Flash firmware</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Getting Up and Running</h4>
+                        <asciinema-player
                             src="static/asciinema/flash_micropython.cast"
                             cols="170"
                             rows="20"
@@ -169,194 +166,186 @@
                             speed="2"
                             font-size="16px">
                         </asciinema-player>
-					</section>
-					<section>
-						<h4>WebREPL Activation</h4>
-						<ul>
-							<li>Use `picocom` to activate webrepl.</li>
-							<li>Connect to the ESP's WiFi</li>
-							<li>Use WebREPL to test out MicroPython</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Uploading Scripts Using WebREPL CLI</h4>
-						<div class="asciinema asciinema-demo" id="upload-files"></div>
-					</section>
-					<section>
-						<h4>NeoPixel Demo</h4>
-						<div>
-							<p>NeoPixels video & code demo goes here.</p>
-						</div>
-					</section>
-					<section>
-						<h4>Links to MicroPython Tutorials</h4>
-						<ul>
-							<li><a href="">MicroPython Documentation</a></li>
-							<li><a href="">MicroPython WebREPL Repo</a></li>
-							<li><a href="">Circuit Python Documentation</a></li>
-						</ul>
-					</section>
-				</section>
-				<section id='communication'>
-					<section>
-						<h2>Communicating with the NodeMCUs</h2>
-					</section>
-					<section>
-						<h4>Architecture</h4>
-						<div>
-							<img alt="Architecture diagram goes here" />
-						</div>
-					</section>
-					<section>
-						<h4>Hardware</h4>
-						<ul>
-							<li>ESP8266: 3 Nos.</li>
-							<li>Raspberry Pi 3B+: 2 Nos.</li>
-							<li>Raspberry Pi Zero W: 4 Nos.</li>
-							<li>Raspberry Pi Cluster Hat v2.2: 1 No.</li>
-							<li>Raspberry Pi 7 Inch Touch Screen</li>
-							<li>Raspberry Pi 3 4 Node Microphone Array</li>
-							<li>WS2818B Addressable RGB LED Strips: 10 meter</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Communicating with the ESP8266: The MQTT Protocol</h4>
-						<ul>
-							<li>A Lightweight Protocol for <span class="code-snippet">&lt;buzzword&gt;IoT&lt;/buzzword&gt;</span></li>
-							<li>Supported by RabbitMQ using the <span class="code-snippet">rabbitmq_mqtt</span> plugin <a href="https://www.rabbitmq.com/mqtt.html"><i class="fa fa-link"></i></a></li>
-							<li>Use the mqtt library in MicroPython, queue names should contain slashes.</li>
-							<li><b>Protip:</b> Use the <span class="code-snippet">amqp.topic</span> exchange and replace slashes in the mqtt queue name with dots.</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>The Catalogue</h2>
-					</section>
-					<section>
-						<h4>Flask</h4>
-						<ul>
-							<li>Lightweight and completely customizable.</li>
-							<li>Flask_Ask supports Alexa.</li>
-							<li>Easy to hack around with.</li>
-							<li>sqlite3 + flask_sqlalchemy</li>
-							<li>Flask_Ask module to interface with Alexa</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Telegram</h4>
-						<ul>
-							<li>Easy Chat API to send ISBN for Indexing</li>
-							<li>Easy search UI, use title to search</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Alexa Integration</h4>
-						<ul>
-							<li>Flask_Ask for Alexa Skills</li>
-							<li>Easy to use API</li>
-							<li>Troublesome Documentation / Examples for amazon.in</li>
-						</ul>
-					</section>
-				</section>
-				<section id="demo">
-					<section>
-						<h2>Demo Videos</h2>
-					</section>
-					<section>
-						<h4>Initial Troubles</h4>
+                    </section>
+                    <section>
+                        <h4>WebREPL Activation</h4>
+                        <ul>
+                            <li>Use `picocom` to activate webrepl.</li>
+                            <li>Connect to the ESP's WiFi</li>
+                            <li>Use WebREPL to test out MicroPython</li>
+                        </ul>
+                    </section>
+                    <section data-markdown>
+                        <h4>Uploading Scripts Using WebREPL CLI</h4>
+                            <script type="text/template">
+                                ### Uploading Scripts using the webREPL CLI
+
+                                ```
+                                webrepl_cli.py -p <PASSWORD> local_file.py \
+                                    <IP>:/destination.py
+                                ```
+                            </script>
+                        </section>
+                        <section>
+                            <h4>Anatomy of a MicroPython Program</h4>
+                            <ul>
+                                <li><a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/boot.py"><i class="fa fa-link"></i></a>boot.py</li>
+                                <li>webrepl_cfg.py</li>
+                                <li><a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/main.py"><i class="fa fa-link"></i></a>main.py</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section>
+                        <h4>Links to MicroPython Tutorials</h4>
+                        <ul>
+                            <li><a href="https://docs.micropython.org/en/latest/">MicroPython Documentation</a></li>
+                            <li><a href="https://github.com/micropython/webrepl">MicroPython WebREPL Repo</a></li>
+                            <li><a href="https://circuitpython.org/">Circuit Python Documentation</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section id='communication'>
+                    <section>
+                        <h2>Communicating with the NodeMCUs</h2>
+                    </section>
+                    <section>
+                        <h4>Architecture</h4>
+                        <div>
+                            <img alt="Architecture diagram" src="static/img/arch.png"/>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Hardware</h4>
+                        <ul>
+                            <li>ESP8266: 3 Nos.</li>
+                            <li>Raspberry Pi 3B+: 1 Nos.</li>
+                            <li>Raspberry Pi Zero W: 4 Nos.</li>
+                            <li>Raspberry Pi Cluster Hat v2.2: 1 No.</li>
+                            <li>WS2818B Addressable RGB LED Strips: 10 meter</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Communicating with the ESP8266: The MQTT Protocol</h4>
+                        <ul>
+                            <li>A Lightweight Protocol for <span class="code-snippet">&lt;buzzword&gt;IoT&lt;/buzzword&gt;</span></li>
+                            <li>Easily implemented using Mosquitto <a href="https://mosquitto.org/"><i class="fa fa-link"></i></a></li>
+                            <li>Use the mqtt library in MicroPython, topics can be split using slashes.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="static/img/mqtt-demo.gif" alt="mqtt-demo">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>The Catalogue</h2>
+                    </section>
+                    <section>
+                        <h4>Flask</h4>
+                        <ul>
+                            <li>Lightweight and completely customizable.</li>
+                            <li>Easy to hack around with, nothing is predetermined.</li>
+                            <li>psycopg2 + flask_migrate + flask_sqlalchemy</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>DB Schema</h4>
+                        <img src="static/img/db.png" />
+                    </section>
+                </section>
+                <section id="demo">
+                    <section>
+                        <h2>Demo Videos</h2>
+                    </section>
+                    <section>
+                        <h4>Initial Troubles</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
-					</section>
-					<section>
-						<h4>What's Capacitence, Doc?</h4>
-						<iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
-					</section>
-					<section>
-						<h4>Improving Control</h4>
+                    </section>
+                    <section>
+                        <h4>What's Capacitence, Doc?</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
+                    </section>
+                    <section>
+                        <h4>Improving Control</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
-					</section>
-					<section>
-						<h4>Final (WIP)</h4>
+                    </section>
+                    <section>
+                        <h4>Final (WIP)</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1"></iframe>
-					</section>
+                    </section>
+                </section>
+                <section>
+                    <section class="fragments">
+                        <h2>Future Upgrades</h2>
+                        <h4 class="fragment">Improved Voice-UI</h4>
+                        <ul class="fragment">
+                            <li>Web UI with flask_wtf</li>
+                            <li>Telegram Bot (WIP)</li>
+                            <li>Bookshelf metrics: visualize read-count, days since last read stats with LEDs!</li>
+                            <li>Alexa Skill using Flask_Ask</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>
+                        Questions
+                    </h2>
+                    <p>
+                        <i class='fa fa-twitter fa-fw'></i>
+                        <a href="https://twitter.com/user/vinay87">Vinay Keerthi</a></p>
+                </section>
+                <section>
+                    <h2>Links</h2>
+                    <ul id="references">
+                        <li><a href="https://stonecharioteer.gitlab.io/blog/snakes_on_a_bookshelf.html">Blogpost</a> detailing the project</li>
+                        <li><a href="https://github.com/bookshelfie"><i class="fa fa-github"></i></a> Repositories</li>
+                        <li><a href="https://www.nodemcu.com/index_en.html">NodeMCU</a></li>
+                        <li><a href="https://clusterhat.com/">Raspberry Pi Cluster Hat</a></li>
+                        <li><a href="https://www.rabbitmq.com/mqtt.html">MQTT on RabbitMQ</a></li>
+                        <li><a href="https://pika.readthedocs.io/en/stable/">Pika AMQP Library</a></li>
+                        <li><a href="https://docs.micropython.org/en/latest/esp8266/quickref.html">MicroPython Documentation</a></li>
+                        <li><a href="https://docs.micropython.org/en/latest/esp8266/tutorial/neopixel.html">NeoPixels Documentation</a></li>
+                        <li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
+                        <li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
+                        <li><a href="https://asciinema.org/">Asciinema</a></li>
+                        <li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
+                    </ul>
+                </section>
+            </div>
 
-				</section>
-				<section>
-					<section>
-						<h2>Future Upgrades</h2>
-					</section>
-					<section>
-						<h4>Improved Voice-UI</h4>
-						<ul>
-							<li>Send photo of book / ISBN code via telegram for indexing.</li>
-							<li>Rasa for NLP</li>
-							<li>Analyse reading pattern and suggest next books</li>
-							<li>Improved Telegram bot that lets me purchase books via Amazon</li>
-							<li>Bookshelf metrics: visualize read-count, days since last read stats with LEDs!</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<h2>
-						Questions
-					</h2>
-					<p>
-						<i class='fa fa-twitter fa-fw'></i>
-						<a href="https://twitter.com/user/vinay87">Vinay Keerthi</a></p>
-				</section>
-				<section>
-					<h2>Links</h2>
-					<ul id="references">
-						<li><a href="https://stonecharioteer.gitlab.io/blog/snakes_on_a_bookshelf.html">Blogpost</a> detailing the project</li>
-						<li><a href="https://gitlab.com/bookshelfie">Gitlab</a> Repositories</li>
-						<li><a href="https://www.nodemcu.com/index_en.html">NodeMCU</a></li>
-						<li><a href="https://clusterhat.com/">Raspberry Pi Cluster Hat</a></li>
-						<li><a href="https://www.rabbitmq.com/mqtt.html">MQTT on RabbitMQ</a> | <a href="" target="_blank">Dockerfile</a></li>
-						<li><a href="https://pika.readthedocs.io/en/stable/">Pika AMQP Library</a></li>
-						<li><a href="https://docs.micropython.org/en/latest/esp8266/quickref.html">MicroPython Documentation</a></li>
-						<li><a href="https://docs.micropython.org/en/latest/esp8266/tutorial/neopixel.html">NeoPixels Documentation</a></li>
-						<li><a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a></li>
-						<li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
-						<li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
-						<li><a href="https://asciinema.org/">Asciinema</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
-					</ul>
-				</section>
-			</div>
+        </div>
 
-		</div>
-
-		<script src="static/revealjs/js/reveal.js"></script>
+        <script src="static/revealjs/js/reveal.js"></script>
         <script src="static/asciinema-player/2.4.1/asciinema-player.js"></script>
 
-		<script>
+        <script>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				controlsTutorial: true,
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                controlsTutorial: true,
                 controlsLayout: "bottom-right",
                 controlsBackArrows: "faded",
-				progress: true,
-				center: true,
-				hash: true,
-				slideNumber: 'c/t',
+                progress: true,
+                center: true,
+                hash: true,
+                slideNumber: 'c/t',
                 history: true,
-				center: true,
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+                center: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'static/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'static/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'static/revealjs/plugin/highlight/highlight.js', async: true },
-					{ src: 'static/revealjs/plugin/search/search.js', async: true },
-					{ src: 'static/revealjs/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'static/revealjs/plugin/notes/notes.js', async: true }
-				]
-			});
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'static/revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'static/revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'static/revealjs/plugin/highlight/highlight.js', async: true },
+                    { src: 'static/revealjs/plugin/search/search.js', async: true },
+                    { src: 'static/revealjs/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'static/revealjs/plugin/notes/notes.js', async: true }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
