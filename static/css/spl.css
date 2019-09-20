@@ -20,6 +20,10 @@ img.bookshelves {
     font-size: 18px;
 }
 
+img.tech {
+    margin: 0.5rem!important;
+    width: 500px;
+}
 
 div.logo-stack {
     margin: 0;
@@ -72,7 +76,7 @@ div#about-me-links {
     align-content: center
 }
 
-div#about-me-links > a { 
+div#about-me-links > a {
     text-decoration: none;
     background-color: #000;
     font-size: 1.4rem;
@@ -82,7 +86,7 @@ div#about-me-links > a {
     border-radius: 1rem;
 }
 
-p.tiny#about-me > a > i{ 
+p.tiny#about-me > a > i{
     color: #f15;
     margin: 0.1rem;
     padding: 0.5rem;
@@ -99,7 +103,7 @@ div.content-wip {
     text-transform: capitalize;
 }
 
-div.content-wip:before { 
+div.content-wip:before {
     content: "Work in Progress"
 }
 
@@ -145,8 +149,8 @@ section.wip  p.wip {
     font-size: 0.8rem;
 }
 
-p.wip > date { 
+p.wip > date {
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.8 rem;
-    
+
 }
