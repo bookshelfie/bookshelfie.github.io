@@ -45,54 +45,62 @@
                         Vinay Keerthi
                     </p>
                     <p class='tiny'>
-                            Sr. Software Engineer, <i class="fa fa-cc-visa"></i>
+                        Sr. Software Engineer, <i class="fa fa-cc-visa"></i><br />
+                        PyCon India 2019 <br/>
                     </p>
                     <hr >
                     <div id="about-me-links">
                         <a href="https://gitlab.com/user/stonecharioteer">
-                            <i class="fa fa-github fa-fw"></i> stonecharioteer
-                        </a><a href="https://bookshelfie.gitlab.io">
-                            <i class="fa fa-book fa-fw"></i> bookshelfie.gitlab.io
+                            <i class="fa fa-github fa-fw"></i> https://github.com/stonecharioteer
+                        </a>
+                        <a href="https://bookshelfie.github.io">
+                            <i class="fa fa-book fa-fw"></i> https://bookshelfie.github.io
                         </a>
                     </div>
                 </section>
                 <section id='intro'>
                     <section>
-                        <h2>Why?</h2>
-                        <p>Why do you want a Bookshelf that runs Python?</p>
+                        <h2>My bookshelf runs on Python</h2>
+                        <img src="static/img/logo/python-powered-h.svg" height="300px">
+                    </section>
+                    <section class="fragments">
+                        <h2>Hold up.</h2>
+                        <p class="fragment">Why do you <b>need</b> a Bookshelf that runs Python?</p>
+                        <p class="fragment">Clearly, you have way too much time.</p>
                     </section>
                     <section>
-                        <h4>I Own Over a 1000 Books</h4>
-                        <div class="img-grid">
-                            <img class='bookshelves' src="static/img/bookshelves/001.jpg" alt="">
-                            <img class='bookshelves' src="static/img/bookshelves/002.jpg" alt="">
-                            <img class='bookshelves' src="static/img/bookshelves/004.jpg" alt="">
-                            <img class='bookshelves' src="static/img/bookshelves/005.jpg" alt="">
+                        <h4>Admission: I Own Over a 1000 Books</h4>
+                        <div class="img-grid fragments">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/001.jpg" alt="">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/002.jpg" alt="">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/004.jpg" alt="">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/005.jpg" alt="">
                         </div>
                     </section>
                     <section>
                         <h4>Seriously, it's hard to keep count.</h4>
-                        <div class="img-grid">
-                            <img class='bookshelves' src="static/img/bookshelves/006.jpg" alt="">
-                            <img class='bookshelves' src="static/img/bookshelves/008.jpg" alt="">
+                        <div class="img-grid fragments">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/006.jpg" alt="">
+                            <img class='bookshelves fragment' src="static/img/bookshelves/008.jpg" alt="">
                         </div>
                     </section>
                     <section>
-                        <h4>I've Tried it All.</h4>
-                        <ul>
-                            <li>Notebooks: Too troublesome to carry</li>
-                            <li>Spreadsheets: Easy at first, too difficult to sync.</li>
-                            <li>Goodreads: Annoying API</li>
-                            <li>LibraryThing: Free account has a limit of 250 books.</li>
+                        <h4>But couldn't you just use one of the following:</h4>
+                        <ul class="fragments">
+                            <li class="fragment">Notebooks: Too troublesome to carry</li>
+                            <li>Spreadsheets: Easy at first, too difficult to sync. <br /> Also <em>Google Sheets on the phone?</em> &#129326;
+                                </li>
+                            <li class="fragment">Goodreads: Annoying API. Seriously, Amazon, what the hell?</li>
+                            <li class="fragment">LibraryThing: Free account has a limit of 250 books. Plus by this point I want the index to be local</li>
                         </ul>
                     </section>
-                    <section class="fragments">
+                    <section>
                         <h4>I <b>also</b> own a lot of tech</b></h4>
-                        <div class="fragment img-grid">
-                            <img class="bookshelves" src="static/img/clusterhat.jpg" alt="clusterhat"/>
-                            <img class="bookshelves" src="static/img/nodemcus.jpg" alt="clusterhat"/>
-                            <img class="bookshelves" src="static/img/ws2812b.jpg" alt="clusterhat"/>
-                            <img class="bookshelves" src="static/img/raspi.jpg" alt="clusterhat"/>
+                        <div class="fragments img-grid">
+                            <img class="bookshelves fragment" src="static/img/clusterhat.jpg" alt="clusterhat"/>
+                            <img class="bookshelves fragment" src="static/img/nodemcus.jpg" alt="clusterhat"/>
+                            <img class="bookshelves fragment" src="static/img/ws2812b.jpg" alt="clusterhat"/>
+                            <img class="bookshelves fragment" src="static/img/raspi.jpg" alt="clusterhat"/>
                         </div>
                         <p class="fragment">I think the AliExpress people know me well</p>
                     </section>
@@ -113,16 +121,16 @@
                 </section>
                 <section id='micropython-rgb'>
                     <section>
-                        <h2>Prelude: Micropython</h2>
+                        <h2>Introduction to Micropython</h2>
                         <img src="static/img/logo/micropython.png" height="300" />
                     </section>
                     <section>
-                        <h4>What is <span id='uPy'>MicroPython</span>?</h4>
+                        <h4>What is <span class="code-snippet">MicroPython</span>?</h4>
                         <ul>
                             <li>Python for Microcontrollers</li>
-                            <li><b>Seriously,</b> you can code Python on a $2 board.</li>
+                            <li><b>Seriously,</b> you can <em>run Python on a $2 board.</em></li>
                             <li>Tiny, includes a subset of CPython's libraries</li>
-                            <li>Runs off chips with 256kB space and 16k RAM</li>
+                            <li>Runs off chips with 8kB space and 128k RAM</li>
                         </ul>
                     </section>
                     <section>
@@ -146,6 +154,8 @@
                             <li>Runs Lua out of the box</li>
                             <li>Can install MicroPython firmware</li>
                             <li>Supports WiFi</li>
+                            <li>Has 128kB RAM and 4MB ROM</li>
+                            <li>USB Interface</li>
                             <li>Costs ~140 Rs</li>
                         </ul>
                     </section>
@@ -173,35 +183,34 @@
                     <section>
                         <h4>WebREPL Activation</h4>
                         <ul>
-                            <li>Use `picocom` to activate webrepl.</li>
+                            <li>Use <span class='code-snippet'>picocom</span> to activate the webREPL.</li>
+                            <li>Protip: <span class="code-snippet">screen /dev/ttyUSBx 115200</span> does the job better since it's easier to exit out of.</li>
                             <li>Connect to the ESP's WiFi</li>
                             <li>Use WebREPL to test out MicroPython</li>
                         </ul>
                     </section>
                     <section data-markdown>
-                        <h4>Uploading Scripts Using WebREPL CLI</h4>
-                            <script type="text/template">
                                 ### Uploading Scripts using the webREPL CLI
 
                                 ```
                                 webrepl_cli.py -p <PASSWORD> local_file.py \
                                     <IP>:/destination.py
                                 ```
-                            </script>
-                        </section>
-                        <section>
-                            <h4>Anatomy of a MicroPython Program</h4>
-                            <ul>
-                                <li><a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/boot.py"><i class="fa fa-link"></i></a>boot.py</li>
-                                <li>webrepl_cfg.py</li>
-                                <li><a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/main.py"><i class="fa fa-link"></i></a>main.py</li>
-                            </ul>
-                        </section>
+                    </section>
+                    <section>
+                        <h4>Lifecycle of a MicroPython Program</h4>
+                        <ul>
+                            <li>Very similar to Arduino</li>
+                            <li>First: <a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/boot.py"><i class="fa fa-link"></i></a><span class="code-snippet">boot.py</span></li>
+                            <li>(optional) <span class='code-snippet'>webrepl_cfg.py</span></li>
+                            <li>Finally: <a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/main.py"><i class="fa fa-link"></i></a><span class="code-snippet">main.py</span></li>
+                        </ul>
                     </section>
                 </section>
                 <section id='communication'>
                     <section>
-                        <h2>Communicating with the NodeMCUs</h2>
+                        <h2>Shelfie MicroPython</h2>
+                        <h4>Miniature snakes</h4>
                     </section>
                     <section>
                         <h4>Architecture</h4>
@@ -224,7 +233,7 @@
                         <ul>
                             <li>A Lightweight Protocol for <span class="code-snippet">&lt;buzzword&gt;IoT&lt;/buzzword&gt;</span></li>
                             <li>Easily implemented using Mosquitto <a href="https://mosquitto.org/"><i class="fa fa-link"></i></a></li>
-                            <li>Use the mqtt library in MicroPython, topics can be split using slashes.</li>
+                            <li>Use the <span class="code-snippet">mqtt</span> library in MicroPython, topics can be split using slashes.</li>
                         </ul>
                     </section>
                     <section>
@@ -234,19 +243,55 @@
                 </section>
                 <section>
                     <section>
-                        <h2>The Catalogue</h2>
+                        <h2>Shelfie Server</h2>
+                        <h5>CRUD! He's used Flask</h5>
                     </section>
                     <section>
                         <h4>Flask</h4>
                         <ul>
                             <li>Lightweight and completely customizable.</li>
                             <li>Easy to hack around with, nothing is predetermined.</li>
-                            <li>psycopg2 + flask_migrate + flask_sqlalchemy</li>
+                            <li><span class='code-snippet'>psycopg2 + flask_migrate + flask_sqlalchemy</span></li>
                         </ul>
                     </section>
                     <section>
                         <h4>DB Schema</h4>
                         <img src="static/img/db.png" />
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Shelfie Voice</h2>
+                        <h4>It speaks!</h4>
+                    </section>
+                    <section>
+                        <h4>Alexa</h4>
+                        <ul>
+                            <li><span class='code-snippet'>Flask_Ask</span> is a great plugin for Alexa.</li>
+                            <li>Used in combination with <span class='code-snippet'>ngrok</span>, it is easy to configure.</li>
+                            <li>Protip: When you want a raw string: use <span class='code-snippet'>AMAZON.SearchQuery</span></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Amazon Developer Page: Configuring The Skill</h4>
+                        <img src="static/img/alexa_intent.png">
+                    </section>
+                    <section>
+                        <h4>Amazon Developer Page: Configuring The Query Variable</h4>
+                        <img src="static/img/intent_variable.png">
+                    </section>
+                    <section>
+                        <h4>shelfie-voice Code</h4>
+                        <img height="600px" src="static/img/flask_ask.png">
+                    </section>
+                    <section>
+                        <h4>Caveats</h4>
+                        <ul>
+                            <li>A bit slow, could work better on AWS native instead of my ngrok hack</li>
+                            <li>Direct integration with the shelf server might be faster</li>
+                            <li>Other libraries to consider: AWS's own library for Alexa.</li>
+                            <li><span class='code-snippet'>Flask_Ask</span> is poorly packaged. Has dependencies locked to older versions of <<span class='code-snippet'>cryptography</li>
+                        </ul>
                     </section>
                 </section>
                 <section id="demo">
@@ -258,7 +303,7 @@
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
                     </section>
                     <section>
-                        <h4>What's Capacitence, Doc?</h4>
+                        <h4>What's Capacitance, Doc?</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
                     </section>
                     <section>
@@ -266,19 +311,22 @@
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
                     </section>
                     <section>
-                        <h4>Final (WIP)</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1"></iframe>
+                        <h2>The End Result</h2>
+                    </section>
+                    <section>
+                        <h4>Shelfie: Finding a Book When You Own 1500</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/T3VgZJxRrww?autoplay="></iframe>
                     </section>
                 </section>
                 <section>
                     <section class="fragments">
                         <h2>Future Upgrades</h2>
-                        <h4 class="fragment">Improved Voice-UI</h4>
+                        <h4 class="fragment">Improved Interfaces</h4>
                         <ul class="fragment">
                             <li>Web UI with flask_wtf</li>
-                            <li>Telegram Bot (WIP)</li>
+                            <li>Telegram Bot</li>
                             <li>Bookshelf metrics: visualize read-count, days since last read stats with LEDs!</li>
-                            <li>Alexa Skill using Flask_Ask</li>
+                            <li>NLP for the voice interface</li>
                         </ul>
                     </section>
                 </section>
@@ -288,7 +336,13 @@
                     </h2>
                     <p>
                         <i class='fa fa-twitter fa-fw'></i>
-                        <a href="https://twitter.com/vinay87">Vinay Keerthi</a></p>
+                        <a href="https://twitter.com/vinay87">https://twitter.com/vinay87</a><br />
+                        <i class='fa fa-github fa-fw'></i>
+                        <a href="https://github.com/stonecharioteer">https://github.com/stonecharioteer</a><br />
+                        <i class='fa fa-github fa-fw'></i>
+                        <a href="https://github.com/bookshelfie">https://github.com/bookshelfie</a><br />
+                    </p>
+
                 </section>
                 <section>
                     <h2>Links</h2>
@@ -304,20 +358,17 @@
                         <li><a href="https://www.eclipse.org/paho/">Paho MQTT Client</a></li>
                         <li><a href="https://mosquitto.org/">Eclipse Mosquitto Broker</a></li>
                         <li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
+                        <li><a href="https://ngrok.com/">ngrok</a></li>
                         <li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
                         <li><a href="https://asciinema.org/">Asciinema</a></li>
                         <li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
                     </ul>
                 </section>
             </div>
-
         </div>
-
         <script src="static/revealjs/js/reveal.js"></script>
         <script src="static/asciinema-player/2.4.1/asciinema-player.js"></script>
-
         <script>
-
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 controls: true,
