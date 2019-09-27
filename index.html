@@ -125,7 +125,7 @@
                         <img src="static/img/logo/micropython.png" height="300" />
                     </section>
                     <section>
-                        <h4>What is <span class="code-snippet">MicroPython</span>?</h4>
+                        <h4>What is MicroPython?</h4>
                         <ul>
                             <li>Python for Microcontrollers</li>
                             <li><b>Seriously,</b> you can <em>run Python on a $2 board.</em></li>
@@ -135,10 +135,10 @@
                     </section>
                     <section>
                         <h4>Getting Started with MicroPython</h4>
-                        <ul>
-                            <li>Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
-                            <li>Flash MicroPython firmware</li>
-                            <li>???</li>
+                        <ul class="fragments">
+                            <li class="fragment">Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
+                            <li class="fragment">Flash MicroPython firmware</li>
+                            <li cass="fragment">Profit???</li>
                         </ul>
                     </section>
                     <section>
@@ -156,7 +156,7 @@
                             <li>Supports WiFi</li>
                             <li>Has 128kB RAM and 4MB ROM</li>
                             <li>USB Interface</li>
-                            <li>Costs ~140 Rs</li>
+                            <li>Costs between INR 140 to INR 400 depending on where you get it from.</li>
                         </ul>
                     </section>
                     <section>
@@ -164,9 +164,9 @@
                         <ul>
                             <li>Download Suitable Firmware</li>
                             <li>Setup Virtual Environment</li>
-                            <li><span class='code-snippet'>pip install esptool</span></li>
+                            <li>Run <span class='code-snippet'>pip install esptool</span></li>
                             <li>Add current user to <span class="code-snippet">dialout</span> group (linux)</li>
-                            <li>Flash firmware</li>
+                            <li>Flash firmware: <span class="code-snippet">$ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=detect 0 esp8266-20190529-v1.11.bin</span></li>
                         </ul>
                     </section>
                     <section>
