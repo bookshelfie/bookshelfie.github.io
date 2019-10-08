@@ -56,6 +56,9 @@
                         <a href="https://bookshelfie.github.io">
                             <i class="fa fa-book fa-fw"></i> https://bookshelfie.github.io
                         </a>
+                        <a href="https://stonecharioteer.com">
+                            <i class="fa fa-globe fa-fw"></i> https://stonecharioteer.com
+                        </a>
                     </div>
                 </section>
                 <section id='intro'>
@@ -64,9 +67,8 @@
                         <img src="static/img/logo/python-powered-h.svg" height="300px">
                     </section>
                     <section class="fragments">
-                        <h2>Hold up.</h2>
-                        <p class="fragment">Why do you <b>need</b> a Bookshelf that runs Python?</p>
-                        <p class="fragment">Clearly, you have way too much time.</p>
+                        <a href="https://www.reddit.com/r/HolUp"><img src="static/img/memes/holdup.jpeg" /></a>
+                        <p class="fragment">What do you <b>mean</b> your Bookshelf runs Python?</p>
                     </section>
                     <section>
                         <h4>Admission: I Own Over a 1000 Books</h4>
@@ -77,17 +79,18 @@
                             <img class='bookshelves fragment' src="static/img/bookshelves/005.jpg" alt="">
                         </div>
                     </section>
-                    <section>
+                    <section class="fragments">
                         <h4>Seriously, it's hard to keep count.</h4>
-                        <div class="img-grid fragments">
+                        <div class="img-grid fragment fragments">
                             <img class='bookshelves fragment' src="static/img/bookshelves/006.jpg" alt="">
                             <img class='bookshelves fragment' src="static/img/bookshelves/008.jpg" alt="">
                         </div>
+                        <p class="fragment">And I'm not the most organized of people.</p>
                     </section>
                     <section>
                         <h4>But couldn't you just use one of the following:</h4>
                         <ul class="fragments">
-                            <li class="fragment">Notebooks: Too troublesome to carry</li>
+                            <li class="fragment">Physical Notebooks: Too troublesome to carry</li>
                             <li class="fragment">Spreadsheets: Easy at first, too difficult to sync. <br /> Also <em>Google Sheets on the phone?</em> &#129326;
                                 </li>
                             <li class="fragment">Goodreads: Annoying API. Seriously, Amazon, what the hell?</li>
@@ -118,6 +121,11 @@
                             </div>
                         </span>
                     </section>
+                    <section>
+                        <h3>I built a search engine for my bookshelf, using RGB LEDs</h3>
+                        <!-- TODO: Insert video -->
+                        <p>Placeholder: Put video here to keep their attention. One without sound.</p>
+                    </section>
                 </section>
                 <section id='micropython-rgb'>
                     <section>
@@ -128,7 +136,7 @@
                         <h4>What is MicroPython?</h4>
                         <ul>
                             <li>Python for Microcontrollers</li>
-                            <li><b>Seriously,</b> you can <em>run Python on a $2 board.</em></li>
+                            <li><b>Seriously,</b> you can <em>run Python on tiny boards.</em></li>
                             <li>Tiny, includes a subset of CPython's libraries</li>
                             <li>Runs off chips with 8kB space and 128k RAM</li>
                         </ul>
@@ -138,25 +146,26 @@
                         <ul class="fragments">
                             <li class="fragment">Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
                             <li class="fragment">Flash MicroPython firmware</li>
-                            <li cass="fragment">Profit???</li>
+                            <li class="fragment">Profit???</li>
                         </ul>
                     </section>
                     <section>
-                        <h4>ESP8266 (NODEMCU)</h4>
+                        <h4>ESP8266 (Nodemcu)</h4>
                         <div class='img-grid'>
                             <img src="static/img/hardware/esp8266_001.jpg" alt="ESP8266" class="bookshelves">
                             <img src="static/img/hardware/esp8266_003.jpg" alt="ESP8266" class="bookshelves">
+                            <img src="static/img/hardware/nodemcu-spec.png" alt="ESP8266" class="bookshelves">
                         </div>
                     </section>
                     <section>
-                        <h4>ESP8266 (NodeMCU)</h4>
+                        <h4>ESP8266 (Nodemcu)</h4>
                         <ul>
                             <li>Runs Lua out of the box</li>
                             <li>Can install MicroPython firmware</li>
                             <li>Supports WiFi</li>
                             <li>Has 128kB RAM and 4MB ROM</li>
                             <li>USB Interface</li>
-                            <li>Costs between INR 140 to INR 400 depending on where you get it from.</li>
+                            <li>Costs between INR 140 to INR 400 (or around 3-4 Euros) depending on where you get it from.</li>
                         </ul>
                     </section>
                     <section>
@@ -171,23 +180,33 @@
                     </section>
                     <section>
                         <h4>Getting Up and Running</h4>
-                        <asciinema-player
+                        <img src="static/img/demos/esp8266-flash.gif" />
+                        <!-- <asciinema-player
                             src="static/asciinema/flash_micropython.cast"
                             cols="170"
                             rows="20"
                             idle-time-limit="1"
                             speed="2"
                             font-size="16px">
-                        </asciinema-player>
+                        </asciinema-player> -->
                     </section>
                     <section>
-                        <h4>WebREPL Activation</h4>
+                        <h4>You Don't need to be Hackerman: Introducing the WebREPL</h4>
                         <ul>
                             <li>Use <span class='code-snippet'>picocom</span> to activate the webREPL.</li>
                             <li>Protip: <span class="code-snippet">screen /dev/ttyUSBx 115200</span> does the job better since it's easier to exit out of.</li>
                             <li>Connect to the ESP's WiFi</li>
                             <li>Use WebREPL to test out MicroPython</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h4>Activating the WebREPL</h4>
+                        <img src="static/img/demos/esp8266-webrepl-activate.gif" />
+                    </section>
+                    <section>
+                        <h4>Using the WebREPL</h4>
+                        <img src="static/img/demos/esp8266-webrepl.gif" />
+
                     </section>
                     <section data-markdown>
                                 ### Uploading Scripts using the webREPL CLI
@@ -209,14 +228,8 @@
                 </section>
                 <section id='communication'>
                     <section>
-                        <h2>Shelfie MicroPython</h2>
-                        <h4>Miniature snakes</h4>
-                    </section>
-                    <section>
-                        <h4>Architecture</h4>
-                        <div>
-                            <img alt="Architecture diagram" src="static/img/arch.png" />
-                        </div>
+                        <h2>Shelfie</h2>
+                        <img src="static/img/memes/mofo-snakes.jpeg" />
                     </section>
                     <section>
                         <h4>Hardware</h4>
@@ -229,10 +242,17 @@
                         </ul>
                     </section>
                     <section>
+                        <h4>Architecture</h4>
+                        <div>
+                            <img alt="Architecture diagram" src="static/img/arch.png" />
+                        </div>
+                    </section>
+                    <section>
                         <h4>Communicating with the ESP8266: The MQTT Protocol</h4>
                         <ul>
                             <li>A Lightweight Protocol for <span class="code-snippet">&lt;buzzword&gt;IoT&lt;/buzzword&gt;</span></li>
-                            <li>Easily implemented using Mosquitto <a href="https://mosquitto.org/"><i class="fa fa-link"></i></a></li>
+                            <li>Message Queuing Telemetry Transport</li>
+                            <li>Use Eclipse Mosquitto <a href="https://mosquitto.org/"><i class="fa fa-link"></i></a> for simplicity.</li>
                             <li>Use the <span class="code-snippet">mqtt</span> library in MicroPython, topics can be split using slashes.</li>
                         </ul>
                     </section>
@@ -251,6 +271,8 @@
                         <ul>
                             <li>Lightweight and completely customizable.</li>
                             <li>Easy to hack around with, nothing is predetermined.</li>
+                            <li>Simple is better than complex.</li>
+                            <li>Explicit is better than implicit.</li>
                             <li><span class='code-snippet'>psycopg2 + flask_migrate + flask_sqlalchemy</span></li>
                         </ul>
                     </section>
@@ -258,11 +280,48 @@
                         <h4>DB Schema</h4>
                         <img src="static/img/db.png" />
                     </section>
+                    <section>
+                        <h4>Preview</h4>
+                        <img src="static/img/flask_admin.png" />
+                    </section>
+                    <section>
+                        <h4>Indexing</h4>
+                        <img src="static/img/flask_admin_entry.png" />
+                    </section>
+                    <section>
+                        <h4>Position</h4>
+                        <ul>
+                            <li><span class="code-snippet">m:n.x</span>, where m = column start, n = column end, x = row.</li>
+                            <li>Initial indexing is tedious, but I don't need to be organized later.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Alpha Stage Demos</h2>
+                    </section>
+                    <section>
+                        <h4>Initial Troubles</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
+                    </section>
+                    <section>
+                        <h4>What's Capacitance, Doc?</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
+                    </section>
+                    <section>
+                        <h4>Improving Control</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
+                    </section>
+                </section>
+                <section class="fragments">
+                    <h2>You <code>curl</code> for books? That's <em>boring!</em></h2>
+                    <p class="fragment">Not exactly.</p>
+                    <p class="fragment">I said I wanted to <em>ask</em> my bookshelves for books.</p>
                 </section>
                 <section>
                     <section>
                         <h2>Shelfie Voice</h2>
-                        <h4>It speaks!</h4>
+                        <img src="static/img/memes/its-alive.jpeg">
                     </section>
                     <section>
                         <h4>Alexa</h4>
@@ -299,18 +358,6 @@
                         <h2>Demo Videos</h2>
                     </section>
                     <section>
-                        <h4>Initial Troubles</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
-                    </section>
-                    <section>
-                        <h4>What's Capacitance, Doc?</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
-                    </section>
-                    <section>
-                        <h4>Improving Control</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
-                    </section>
-                    <section>
                         <h2>The End Result</h2>
                     </section>
                     <section>
@@ -336,7 +383,7 @@
                     </h2>
                     <p>
                         <i class='fa fa-twitter fa-fw'></i>
-                        <a href="https://twitter.com/vinay87">https://twitter.com/vinay87</a><br />
+                        <a href="https://twitter.com/stonecharioteer">https://twitter.com/stonecharioteer</a><br />
                         <i class='fa fa-github fa-fw'></i>
                         <a href="https://github.com/stonecharioteer">https://github.com/stonecharioteer</a><br />
                         <i class='fa fa-github fa-fw'></i>
