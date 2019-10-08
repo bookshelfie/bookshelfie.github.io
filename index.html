@@ -302,34 +302,47 @@
                     </section>
                     <section>
                         <h4>Initial Troubles</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1&loop=1"></iframe>
                     </section>
                     <section>
                         <h4>What's Capacitance, Doc?</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1&loop=1"></iframe>
                     </section>
                     <section>
                         <h4>Improving Control</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1&loop=1"></iframe>
                     </section>
-                </section>
-                <section class="fragments">
-                    <h2>You <code>curl</code> for books? That's <em>boring!</em></h2>
-                    <p class="fragment">Not exactly.</p>
-                    <p class="fragment">I said I wanted to <em>ask</em> my bookshelves for books.</p>
+                    <section class="fragments">
+                        <h4>The Prototype</h4>
+                        <p class="fragment"><span class="code-snippet">curl -x GET http://server/api/v1/book/?title=the%20decline%20and%20fall</span></p>
+                        <iframe class="fragment" width="860" height="520" data-src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1&loop=1"></iframe>
+                    </section>
+                    <section class="fragments">
+                        <h2>You <code>curl</code> for books? That's <em>boring!</em></h2>
+                        <p class="fragment">Not <em>exactly.</em></p>
+                        <p class="fragment">I said I wanted to <em>ask</em> my bookshelves for books.</p>
+                    </section>
                 </section>
                 <section>
                     <section>
                         <h2>Shelfie Voice</h2>
                         <img src="static/img/memes/its-alive.jpeg">
                     </section>
+                    <section class="fragments">
+                        <h4 class="fragment">Enter Alexa</h4>
+                        <img class="fragment" height="250px" src="static/img/logo/alexa.jpg" />
+                    </section>
                     <section>
-                        <h4>Alexa</h4>
+                        <h4>Building a Voice API with Flask</h4>
                         <ul>
-                            <li><span class='code-snippet'>Flask_Ask</span> is a great plugin for Alexa.</li>
-                            <li>Used in combination with <span class='code-snippet'>ngrok</span>, it is easy to configure.</li>
-                            <li>Protip: When you want a raw string: use <span class='code-snippet'>AMAZON.SearchQuery</span></li>
+                            <li><span class='code-snippet'>Flask_Ask</span> is a great extension that enables Alexa skills.</li>
+                            <li>To run on a local server with access to the other API, use with <span class='code-snippet'>ngrok</span>.</li>
+                            <li>Can also be configured on AWS, if you want to avoid buying a Raspberry Pi cluster. (Why would you do that?)</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h4>Code</h4>
+                        <a href="https://github.com/bookshelfie/shelfie-voice/blob/master/shelfie_voice/extensions/ask.py" target="_blank"><img height="500px" src="static/img/flask_ask.png"></a>
                     </section>
                     <section>
                         <h4>Amazon Developer Page: Configuring The Skill</h4>
@@ -338,10 +351,7 @@
                     <section>
                         <h4>Amazon Developer Page: Configuring The Query Variable</h4>
                         <img src="static/img/intent_variable.png">
-                    </section>
-                    <section>
-                        <h4>shelfie-voice Code</h4>
-                        <img height="600px" src="static/img/flask_ask.png">
+                        <p>Protip: When you want a raw string: use <span class='code-snippet'>AMAZON.SearchQuery</span></p>
                     </section>
                     <section>
                         <h4>Caveats</h4>
