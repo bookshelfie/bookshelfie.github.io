@@ -122,9 +122,8 @@
                         </span>
                     </section>
                     <section>
-                        <h3>I built a search engine for my bookshelf, using RGB LEDs</h3>
-                        <!-- TODO: Insert video -->
-                        <p>Placeholder: Put video here to keep their attention. One without sound.</p>
+                        <h3>I built a <em>search engine</em> for my bookshelf, using RGB LEDs</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>
                     </section>
                 </section>
                 <section id='micropython-rgb'>
@@ -281,7 +280,7 @@
                         <img src="static/img/db.png" />
                     </section>
                     <section>
-                        <h4>Preview</h4>
+                        <h4>UI with Flask-Admin</h4>
                         <img src="static/img/flask_admin.png" />
                     </section>
                     <section>
@@ -302,15 +301,19 @@
                     </section>
                     <section>
                         <h4>Initial Troubles</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1&loop=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1&loop=1&mute=1"></iframe>
                     </section>
                     <section>
                         <h4>What's Capacitance, Doc?</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1&loop=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1&loop=1&mute=1"></iframe>
                     </section>
                     <section>
                         <h4>Improving Control</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1&loop=1"></iframe>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1&loop=1&mute=1"></iframe>
+                    </section>
+                    <section>
+                        <h4>Indexing Books</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/6bydEXCtO5o?autoplay=1&loop=1"></iframe>
                     </section>
                     <section class="fragments">
                         <h4>The Prototype</h4>
@@ -365,14 +368,22 @@
                 </section>
                 <section id="demo">
                     <section>
-                        <h2>Demo Videos</h2>
+                        <h2>Now Presenting: Shelfie, The Bookshelf Search Engine</h2>
                     </section>
                     <section>
-                        <h2>The End Result</h2>
+                        <h4>Finding a collection</h4>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/8A3bW81jVZ8?autoplay=1&loop=1"></iframe>
                     </section>
                     <section>
-                        <h4>Shelfie: Finding a Book When You Own 1500</h4>
-                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/T3VgZJxRrww?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+                        <h4>In your door! In your door, would you, could you, in the door?</h4>
+                        <iframe width="860" class="fragment" height="520" data-src="https://www.youtube.com/embed/_TgDUx8aP8Q?autoplay=1&loop=1"></iframe>
+                        <!-- <h4>Shelfie: Finding a Book When You Own 1500</h4>
+                            <iframe width="860" height="520" data-src="https://www.youtube.com/embed/T3VgZJxRrww?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+                    </section>
+                    <section class="fragments">
+                        <h4>What if there are books <em>behind books</em>?</h4>
+                        <p class="fragment">I'm glad you asked.</p>
+                        <iframe width="860" class="fragment" height="520" data-src="https://www.youtube.com/embed/T41r5FyYdoI?autoplay=1&loop=1"></iframe>
                     </section>
                 </section>
                 <section>
@@ -383,10 +394,40 @@
                             <li>Web UI with flask_wtf</li>
                             <li>Telegram Bot</li>
                             <li>Bookshelf metrics: visualize read-count, days since last read stats with LEDs!</li>
-                            <li>NLP for the voice interface</li>
+                            <li>Dialogue flow for Alexa skills.</li>
+                            <li>Use spacy for NLP</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Challenges to a MicroPython Project</h2>
+                        <ul class="fragments">
+                            <li class="fragment">Poor learning material</li>
+                            <li class="fragment">No examples for best practises</li>
+                            <li class="fragment">Need some competence with electronics.</li>
+                            <li class="fragment">Procuring components (depends on location)</li>
                         </ul>
                     </section>
                 </section>
+                <section>
+                        <h2>Links</h2>
+                        <ul id="references">
+                            <li><a href="https://github.com/micropython/webrepl">MicroPython WebREPL Repo</a></li>
+                            <li><a href="https://circuitpython.org/">Circuit Python Documentation</a></li>
+                            <li><a href="https://github.com/bookshelfie"><i class="fa fa-github"></i></a> Repositories</li>
+                            <li><a href="https://stonecharioteer.gitlab.io/blog/snakes_on_a_bookshelf.html">Blogpost</a> detailing this project</li>
+                            <li><a href="https://www.nodemcu.com/index_en.html">NodeMCU</a></li>
+                            <li><a href="https://clusterhat.com/">Raspberry Pi Cluster Hat</a></li>
+                            <li><a href="https://docs.micropython.org/en/latest/esp8266/quickref.html">MicroPython Documentation</a></li>
+                            <li><a href="https://docs.micropython.org/en/latest/esp8266/tutorial/neopixel.html">NeoPixels Documentation</a></li>
+                            <li><a href="https://www.eclipse.org/paho/">Paho MQTT Client</a></li>
+                            <li><a href="https://mosquitto.org/">Eclipse Mosquitto Broker</a></li>
+                            <li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
+                            <li><a href="https://ngrok.com/">ngrok</a></li>
+                            <li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
+                            <li><a href="https://asciinema.org/">Asciinema</a></li>
+                            <li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
+                        </ul>
+                    </section>
                 <section>
                     <h2>
                         Questions
@@ -399,28 +440,8 @@
                         <i class='fa fa-github fa-fw'></i>
                         <a href="https://github.com/bookshelfie">https://github.com/bookshelfie</a><br />
                     </p>
+                </section>
 
-                </section>
-                <section>
-                    <h2>Links</h2>
-                    <ul id="references">
-                        <li><a href="https://github.com/micropython/webrepl">MicroPython WebREPL Repo</a></li>
-                        <li><a href="https://circuitpython.org/">Circuit Python Documentation</a></li>
-                        <li><a href="https://github.com/bookshelfie"><i class="fa fa-github"></i></a> Repositories</li>
-                        <li><a href="https://stonecharioteer.gitlab.io/blog/snakes_on_a_bookshelf.html">Blogpost</a> detailing this project</li>
-                        <li><a href="https://www.nodemcu.com/index_en.html">NodeMCU</a></li>
-                        <li><a href="https://clusterhat.com/">Raspberry Pi Cluster Hat</a></li>
-                        <li><a href="https://docs.micropython.org/en/latest/esp8266/quickref.html">MicroPython Documentation</a></li>
-                        <li><a href="https://docs.micropython.org/en/latest/esp8266/tutorial/neopixel.html">NeoPixels Documentation</a></li>
-                        <li><a href="https://www.eclipse.org/paho/">Paho MQTT Client</a></li>
-                        <li><a href="https://mosquitto.org/">Eclipse Mosquitto Broker</a></li>
-                        <li><a href="https://flask-ask.readthedocs.io/en/latest/">Flask-Ask</a> Alexa Library</li>
-                        <li><a href="https://ngrok.com/">ngrok</a></li>
-                        <li><a href="https://python-telegram-bot.org/">Telegram API</a></li>
-                        <li><a href="https://asciinema.org/">Asciinema</a></li>
-                        <li><a href="https://github.com/hakimel/reveal.js/">Reveal.js</a></li>
-                    </ul>
-                </section>
             </div>
         </div>
         <script src="static/revealjs/js/reveal.js"></script>
