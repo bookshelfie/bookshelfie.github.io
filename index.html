@@ -39,7 +39,8 @@
                     <div class="title image-container">
                         <h1 class="main-title">Shelfie</h1>
                         <h4 class="main-subtitle">
-                            Building a Physical Inventory Search Engine</h4>
+                            Building a Physical Inventory Search Engine
+                        </h4>
                     </div>
                     <p class='tiny' id="about-me">
                         Vinay Keerthi
@@ -60,15 +61,26 @@
                             <i class="fa fa-globe fa-fw"></i> https://stonecharioteer.com
                         </a>
                     </div>
+
+                    <aside class="notes">
+                        Remember: introduction at the end. Say something like "Hello! My name is Vinay Keerthi and I will be talking to you about Shelfie, my bookshelf that runs on MicroPython"
+                    </aside>
                 </section>
                 <section id='intro'>
                     <section>
                         <h2>My bookshelf runs on Python</h2>
                         <img src="static/img/logo/python-powered-h.svg" height="300px">
+                        <aside class="notes">
+                            Whenever I tell people that my bookshelf runs on Python, they stare at me.
+                        </aside>
                     </section>
                     <section class="fragments">
                         <a href="https://www.reddit.com/r/HolUp"><img src="static/img/memes/holdup.jpeg" /></a>
                         <p class="fragment">What do you <b>mean</b> your Bookshelf runs Python?</p>
+                        <aside class="notes">
+                            They ask if I have way too much free time, or if I'm workaholic. Some of them say oh and go on their own way. Trust me, while
+                            I was interviewing at other places before I joined Visa, I've had interviewers think I was just talking nonsense.
+                        </aside>
                     </section>
                     <section>
                         <h4>Admission: I Own Over a 1000 Books</h4>
@@ -78,6 +90,9 @@
                             <img class='bookshelves fragment' src="static/img/bookshelves/004.jpg" alt="">
                             <img class='bookshelves fragment' src="static/img/bookshelves/005.jpg" alt="">
                         </div>
+                        <aside class="notes">
+                            I'm rather proud of them. I grew up without many books, but I had a library card and used it everyday.
+                        </aside>
                     </section>
                     <section class="fragments">
                         <h4>Seriously, it's hard to keep count.</h4>
@@ -86,6 +101,10 @@
                             <img class='bookshelves fragment' src="static/img/bookshelves/008.jpg" alt="">
                         </div>
                         <p class="fragment">And I'm not the most organized of people.</p>
+                        <aside class="notes">
+                            It becomes hard to count how many books you have sometimes. Once I crossed 250, I knew I had a problem
+                            that would explode in my face some day.
+                        </aside>
                     </section>
                     <section>
                         <h4>But couldn't you just use one of the following:</h4>
@@ -95,6 +114,11 @@
                             </span></li>
                             <li class="fragments fragment">Goodreads<span class="fragment">: Annoying API. Seriously, Amazon, what the hell?</span></li>
                             <li class="fragments fragment">LibraryThing<span class="fragment">: Free account has a limit of 250 books. Plus by this point I want the index to be local</span></li>
+                            <aside class="notes">
+                                I've had people ask me to try each of these, and to be honest with you, I *have* tried them all.
+                                I even had a distributed ledger. A friend and I had identical copies of a notebook that had a list of my books at one point.
+                                Talk about blockchain, huh?
+                            </aside>
                         </ul>
                     </section>
                     <section>
@@ -106,6 +130,11 @@
                             <img class="bookshelves fragment" src="static/img/raspi.jpg" alt="clusterhat"/>
                         </div>
                         <p class="fragment">I think the AliExpress people know me well</p>
+                        <aside class="notes">
+                            I first heard of the Rasbperry Pi while I was in college, but I couldn't afford one then.
+                            After a few jobs, I decided to start buying a few of them. I now own 6 Rasbperry Pi 3B+, 6 Raspberry Pi Zero W and a whole bunch of
+                            HATs for them. It's *so much fun*! But for a while, I did what everyone does with their Rasbperry Pi. I let it gather dust.
+                        </aside>
                     </section>
                     <section id="fragments">
                         <h4 class="fragments">I ended up with a <b>slightly</b> over-engineered solution</h4>
@@ -120,16 +149,28 @@
                                 <img src="static/img/logo/debian.jpg" alt="debian" class="logo">
                             </div>
                         </span>
+                        <aside class="notes">
+                            So I decided to solve my problem with my collection of electronics and my favourite language: Python!
+                            You might say that the solution is a bit too IMBA for a home server.
+                        </aside>
                     </section>
                     <section>
                         <h3>I built a <em>search engine</em> for my bookshelf, using RGB LEDs</h3>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>
+                        <aside class="notes">
+                            What I mean to say is: I got some RGB LED strips, bought my first soldering iron, got burned once,
+                            and managed to NOT set my house on fire, to build... this.
+                        </aside>
                     </section>
                 </section>
                 <section id='micropython-rgb'>
                     <section>
                         <h2>Introduction to Micropython</h2>
                         <img src="static/img/logo/micropython.png" height="300" />
+                        <aside class="notes">
+                            The majority of this project runs on an amazing project called MicroPython.
+
+                        </aside>
                     </section>
                     <section>
                         <h4>What is MicroPython?</h4>
@@ -139,6 +180,11 @@
                             <li>Tiny, includes a subset of CPython's libraries</li>
                             <li>Runs off chips with 8kB space and 128k RAM</li>
                         </ul>
+                        <aside class="notes">
+                            MicroPython is a tiny subset of Python, developed to target microcontrollers.
+                            The language is syntactically similar to Python, you have the same paradigms, and you can do a lot of the same things.
+                            It is just a more pythonic way to build an IoT project. No C knowledge required!
+                        </aside>
                     </section>
                     <section>
                         <h4>Getting Started with MicroPython</h4>
@@ -147,6 +193,14 @@
                             <li class="fragment">Flash MicroPython firmware</li>
                             <li class="fragment">Profit???</li>
                         </ul>
+                        <aside class="notes">
+                            It is very easy to get started with uPy. Just buy a nodemcu, flask the firmware and...
+                            then what?
+                            Seriously, like I said, most Rasbperry Pi devices are gathering dust somewhere in some geek's
+                            table. So what makes uPy any different?
+                            So many chips must be lying in dust.
+                            But is it that difficult to make something in uPy?
+                        </aside>
                     </section>
                     <section>
                         <h4>Nodemcu</h4>
@@ -155,6 +209,10 @@
                             <img src="static/img/hardware/esp8266_003.jpg" alt="ESP8266" class="bookshelves">
                             <img src="static/img/hardware/nodemcu-spec.png" alt="ESP8266" class="bookshelves">
                         </div>
+                        <aside class="notes">
+                            The nodemcu is a chip based on the ESP8266 WiFi SoC from Esperrif, a chinese company.
+                            There are other chips you can buy, but the nodemcu is easiest to procure and the MicroPython firmware works quite well with it.
+                        </aside>
                     </section>
                     <section>
                         <h4>Nodemcu</h4>
@@ -167,6 +225,10 @@
                             <li>USB Interface</li>
                             <li>Costs between INR 140 to INR 400 (or around 3-4 Euros) depending on where you get it from.</li>
                         </ul>
+                        <aside class="notes">
+                            It has nothing to do with node (thank god), and runs Lua out of the box.
+                            It also has some General Purpose IO pins, which you can use to control a simple circuit. The pins on the chip deal with 3.5V electricity, and the chip can be powered by a 1A Mobile charger since it uses a uUSB port.
+                        </aside>
                     </section>
                     <section>
                         <h4>Flashing MicroPython</h4>
@@ -177,18 +239,19 @@
                             <li>Add current user to <span class="code-snippet">dialout</span> group (linux)</li>
                             <li>Flash firmware: <span class="code-snippet">$ esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash --flash_size=detect 0 esp8266-20190529-v1.11.bin</span></li>
                         </ul>
+                        <aside class="notes">
+                            Wait wait, I've been saying *firmware* a whole lot. Do you have to do some sort of hackerman nonsense to get *Python* running? God I hope not.
+                            Actually, the process for flashing MicroPython on one of these boards takes *seconds*.
+                        </aside>
                     </section>
                     <section>
                         <h4>Getting Up and Running</h4>
                         <img src="static/img/demos/esp8266-flash.gif" />
-                        <!-- <asciinema-player
-                            src="static/asciinema/flash_micropython.cast"
-                            cols="170"
-                            rows="20"
-                            idle-time-limit="1"
-                            speed="2"
-                            font-size="16px">
-                        </asciinema-player> -->
+                        <aside class="notes">
+                            What, you don't believe me? Here's a gif showing you how long it takes.
+                            You first make a venv, activate it, install the dependency, add yourself to the right group in linux, clear the memory of the board, then load the firmware.
+                            And presto! You got yourself a python interpreter on a board that is so small, I carry one with me everywhere.
+                        </aside>
                     </section>
                     <section>
                         <h4>You Don't need to be Hackerman: Introducing the WebREPL</h4>
@@ -198,23 +261,37 @@
                             <li>Connect to the ESP's WiFi</li>
                             <li>Use WebREPL to test out MicroPython</li>
                         </ul>
+                        <aside class="notes">
+                            But again, I need to use the terminal?
+                            Not quite. You can use a Web-based REPL.
+                        </aside>
                     </section>
                     <section>
                         <h4>Activating the WebREPL</h4>
                         <img src="static/img/demos/esp8266-webrepl-activate.gif" />
+                        <aside class="notes">
+                            To activate it, you get onto the board by using screen, and import webrepl_setup, which asks you for a password.
+                            Hmm, someone should send these guys a PR to mask the input.
+                            Once you're done, you can git clone the webrepl repository and launch the html file from your browser.
+                        </aside>
                     </section>
                     <section>
                         <h4>Using the WebREPL</h4>
                         <img src="static/img/demos/esp8266-webrepl.gif" />
-
+                        <aside class="notes">
+                            The webrepl gives you an interpreter, and also lets you upload and download files from it.
+                            It makes it easy to debug stuff and you can write code on your favourite editor.
+                            But if you want to use a terminal to upload the scripts into the nodemcu, then there's the CLI.
+                            I like setting up the script as a git pre-commit hook.
+                        </aside>
                     </section>
                     <section data-markdown>
-                                ### Uploading Scripts using the webREPL CLI
+                        ### Uploading Scripts using the webREPL CLI
 
-                                ```
-                                webrepl_cli.py -p PASSWORD local_file.py \
-                                    IP:/destination.py
-                                ```
+                        ```
+                        webrepl_cli.py -p PASSWORD local_file.py \
+                            IP:/destination.py
+                        ```
                     </section>
                     <section>
                         <h4>Lifecycle of a MicroPython Program</h4>
@@ -224,12 +301,23 @@
                             <li>(optional) <span class='code-snippet'>webrepl_cfg.py</span></li>
                             <li>Finally: <a href="https://github.com/bookshelfie/shelfie-micropython/blob/master/shelfie/main.py"><i class="fa fa-link"></i></a><span class="code-snippet">main.py</span></li>
                         </ul>
+                        <aside class="notes">
+                            If you've coded in Arduino before, this might be familiar to you. When your board "boots" up, it first executes a file named boot.py, and then it proceeds to run main.py. Of course any imports in boot.py will happen before main.
+                            This is similar to the arduino world. Boot is executed everytime the chip wakes up, whether from no power or from deep sleep.
+                            So you can do your configuration there. I use boot.py to connect to wifi, and to also read the config files.
+                            main.py runs constantly. So this is where people usually use a while true loop. You can poll something, and you perform actions. Perhaps you put your chip in deep sleep.
+                        </aside>
                     </section>
                 </section>
                 <section id='communication'>
                     <section>
                         <h2>Shelfie</h2>
                         <img src="static/img/memes/mofo-snakes.jpeg" />
+                        <aside class="notes">
+                            So that is how you get started with MicroPython. You now know more than I did when I decided to take
+                            some of these nodemcus, strap together a few LED strips and pray to God that I didn't burn the house down
+                            with a solder iron.
+                        </aside>
                     </section>
                     <section>
                         <h4>Hardware</h4>
@@ -240,12 +328,26 @@
                             <li>Raspberry Pi Cluster Hat v2.2: 1 No.</li>
                             <li>WS2818B Addressable RGB LED Strips: 10 meter</li>
                         </ul>
+                        <aside class="notes">
+                            What did I need to get started with this project: the following.
+                        </aside>
                     </section>
                     <section>
                         <h4>Architecture</h4>
                         <div>
                             <img alt="Architecture diagram" src="static/img/arch.png" />
                         </div>
+                        <aside class="notes">
+                            Shelfie runs on the Raspberry Pi cluster hat. When I say Shelfie, there are several components.
+                            The main component is a flask based web application running on the head node of my cluster.
+                            This communicates with a postgres database, which stores all my data. This database is on one raspberry pi zero w.
+                            The flask app also speaks to a mosquitto MQTT queue, which I'll talk about later. In simple terms, Mosquitto is a message queue
+                            that sort of operates in the pub-sub model.
+                            Then I plan to put all sorts of connected services on the other nodes of the Raspberry Pi cluster.
+                            What services? Well, I'll tell you later.
+                            The MicroPython bit runs on 3 nodemcu chips which are on the bookshelves. They are subscribed to 3 topics on the mosquitto server,
+                            and perform actions based on those topics.
+                        </aside>
                     </section>
                     <section>
                         <h4>Communicating with the ESP8266: The MQTT Protocol</h4>
@@ -255,16 +357,27 @@
                             <li>Use Eclipse Mosquitto <a href="https://mosquitto.org/"><i class="fa fa-link"></i></a> for simplicity.</li>
                             <li>Use the <span class="code-snippet">mqtt</span> library in MicroPython, topics can be split using slashes.</li>
                         </ul>
+                        <aside class="notes">
+                            MQTT is a lightweight protocol for message passing, made for IoT. It works on the publisher-subscriber model, and sits atop the TCP/IP protocol.
+                            MQTT was first initialized in 1999 and has been used in several production grade applications. Hike messenger used MQTT for communication!
+                        </aside>
                     </section>
                     <section>
                         <h4>MQTT Demo</h4>
                         <img src="static/img/mqtt-demo.gif" id="gif" alt="mqtt-demo">
+                        <aside class="notes">
+                            This is an example of how the nodemcu responds when I write a message to the topic it is subscribed to. I have 3 topics, labelled
+                            according to the shelf. The chip, on receiving the payload processes it according to the topic, and responds, running a predetermined python function.
+                        </aside>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h2>Shelfie Server</h2>
                         <h5>CRUD! He's used Flask</h5>
+                        <aside class="notes">
+                            I used flask for my web server. Why flask? I can explain.
+                        </aside>
                     </section>
                     <section>
                         <h4>Flask</h4>
@@ -275,18 +388,30 @@
                             <li>Explicit is better than implicit.</li>
                             <li><span class='code-snippet'>psycopg2 + flask_migrate + flask_sqlalchemy</span></li>
                         </ul>
+                        <aside class="notes">
+                            Flask shines in cases like this where you want just some particular features. Plus, there's thing I like to say. If you write flask with
+                            care and make things super structured, it becomes Django in disguise.
+                        </aside>
                     </section>
                     <section>
                         <h4>DB Table Schema</h4>
                         <img src="static/img/db.png" />
+                        <aside class="notes">Where am I storing the data? Well, in a postgresql database. Right now, it is a simple table. This could have been on sqllite, but then again we're back to the why not use Excel question. The table does not use ISBNs as primary keys because I have a lot of books without the ISBN, some rare first edition books that were published before there was any system of numbering books. I also have fields to record the height and width of the books, but this is for a later feature that I have not yet implemented. The shelf denotes the label of the shelf, and subsequently the MQTT topic to listen to! The slots denote the number of the LEDs where the book have been placed.</aside>
                     </section>
                     <section>
                         <h4>UI with Flask-Admin</h4>
                         <img src="static/img/flask_admin.png" />
+                        <aside class="notes">
+                            The flask_admin extension makes it easy for me to check the database and make changes or additions.
+                            Like all things to do with Flask, it is easy to customize.
+                        </aside>
                     </section>
                     <section>
                         <h4>Indexing</h4>
                         <img src="static/img/flask_admin_entry.png" />
+                        <aside class="notes">
+                            With this, I don't need to make a GUI for entry or filtering. It's all here.
+                        </aside>
                     </section>
                     <section>
                         <h4>Position</h4>
@@ -295,35 +420,54 @@
                             <li>Indexing books the first time was difficult, but now I can place books anywhere and the bookshelf can remember them.</li>
                             <li>The shelf enables my lack of organization.</li>
                         </ul>
+                        <aside class="notes">
+                            The slots, or the positions are easy to explain. I use the following system. The message I send has the position in a string, using this system.
+                            Some shelves have rows of books, i.e. there are books behind books. Some books are placed horizontally, some are thick so that they take more than one LED in side, and some are thin so you could have 4 to 5 books at a single spot.
+                            Shelfie's system accounts for all of this. In fact this was my goal. I wanted a system of organization that assumes I am not organized. That assumes
+                            that Marie Kondo would probably have a field day in my house.
+                            Shelfie is my answer to that problem.
+                        </aside>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h2>Alpha Stage Demos</h2>
+                        <aside class="notes">It's time for some demos of the alpha stage. I began work on Shelfie last year but the majority of the work on these bunch of videos I'm about to show you happened over a weekend. I spent most of my time debugging micropython, and I didn't have a MQTT queue back then, or a flask server. At the time I was considering writing my own webserver in micropython, naturally inspired by Flask. I've since realized that is a bad idea for various reasons.</aside>
                     </section>
                     <section>
-                        <h4>Initial Troubles</h4>
+                        <h4>Blink, blink</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/YBYUPO1rMCs?autoplay=1&loop=1&mute=1"></iframe>
+                        <aside class="notes">The first time I blinked these LEDs was pure joy.</aside>
                     </section>
                     <section>
                         <h4>What's Capacitance, Doc?</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/_L4kOIKqMhc?autoplay=1&loop=1&mute=1"></iframe>
+                        <aside class="notes">And almost instantly it stopped working. I asked a few friends, friends who are a lot smarter than I am, and once they finished laughing, they told me that I needed a capacitor and a resistor in my circuit. I admit, I did not fully understand any of that. I never paid attention in electronics class.</aside>
                     </section>
                     <section>
                         <h4>Improving Control</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/5Yx_zzhiu6g?autoplay=1&loop=1&mute=1"></iframe>
+                        <aside class="class">
+                            Once I had better control, I instantly wanted to make a game like snake. I wanted to connect this to a bootleg PS4 controller and have fun playing with it. With my voltage problems solved, I could do that.
+                        </aside>
                     </section>
                     <section>
                         <h4>Indexing Books</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/6bydEXCtO5o?autoplay=1&loop=1"></iframe>
+                        <aside class="notes">
+                            I even came up with a way to help me count which LED I'm placing a book in. I simply highlight the 10th LEDs and count the tens. It is a simple hack,
+                            but it works!
+                        </aside>
                     </section>
                     <section class="fragments">
                         <h4>The Prototype</h4>
                         <p class="fragment"><span class="code-snippet">curl -x GET http://server/api/v1/book/?title=the%20decline%20and%20fall</span></p>
                         <iframe class="fragment" width="860" height="520" data-src="https://www.youtube.com/embed/Gjc9Y9n9Y_I?autoplay=1&loop=1"></iframe>
+                        <aside class="notes">Now back to the video you've seen before. I *curl* for a book with a given title, and the bookshelf responds by showing me where it is with LEDs.</aside>
                     </section>
                     <section class="fragments">
-                        <h2>You <code>curl</code> for books? That's <em>boring!</em></h2>
+                        <h2>You <em><code class="fragment highlight-green">curl</code></em> for books?</h2>
+                        <p class="fragment fade-in">That's <em>boring!</em></p>
                         <p class="fragment">Not <em>exactly.</em></p>
                         <p class="fragment">I said I wanted to <em>ask</em> my bookshelves for books.</p>
                     </section>
