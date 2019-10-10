@@ -90,11 +90,11 @@
                     <section>
                         <h4>But couldn't you just use one of the following:</h4>
                         <ul class="fragments">
-                            <li class="fragment">Physical Notebooks: Too troublesome to carry</li>
-                            <li class="fragment">Spreadsheets: Easy at first, too difficult to sync. <br /> Also <em>Google Sheets on the phone?</em> &#129326;
-                                </li>
-                            <li class="fragment">Goodreads: Annoying API. Seriously, Amazon, what the hell?</li>
-                            <li class="fragment">LibraryThing: Free account has a limit of 250 books. Plus by this point I want the index to be local</li>
+                            <li class="fragments fragment">Physical Notebooks<span class="fragment">: Too troublesome to carry</span></li>
+                            <li class="fragments fragment">Spreadsheets<span class="fragment">: Easy at first, too difficult to sync. <br /> Also <em>Google Sheets on the phone?</em> &#129326;
+                            </span></li>
+                            <li class="fragments fragment">Goodreads<span class="fragment">: Annoying API. Seriously, Amazon, what the hell?</span></li>
+                            <li class="fragments fragment">LibraryThing<span class="fragment">: Free account has a limit of 250 books. Plus by this point I want the index to be local</span></li>
                         </ul>
                     </section>
                     <section>
@@ -143,13 +143,13 @@
                     <section>
                         <h4>Getting Started with MicroPython</h4>
                         <ul class="fragments">
-                            <li class="fragment">Buy an ESP8266 or ESP32 Chip (Available on Amazon / AliExpress)</li>
+                            <li class="fragment">Buy an ESP8266 or ESP32 based Chip (Available on Amazon / AliExpress)</li>
                             <li class="fragment">Flash MicroPython firmware</li>
                             <li class="fragment">Profit???</li>
                         </ul>
                     </section>
                     <section>
-                        <h4>ESP8266 (Nodemcu)</h4>
+                        <h4>Nodemcu</h4>
                         <div class='img-grid'>
                             <img src="static/img/hardware/esp8266_001.jpg" alt="ESP8266" class="bookshelves">
                             <img src="static/img/hardware/esp8266_003.jpg" alt="ESP8266" class="bookshelves">
@@ -157,11 +157,12 @@
                         </div>
                     </section>
                     <section>
-                        <h4>ESP8266 (Nodemcu)</h4>
+                        <h4>Nodemcu</h4>
                         <ul>
+                            <li>Based on the ESP8266 Wi-Fi SoC</li>
                             <li>Runs Lua out of the box</li>
                             <li>Can install MicroPython firmware</li>
-                            <li>Supports WiFi</li>
+                            <li>Supports WiFi (2GHz only)</li>
                             <li>Has 128kB RAM and 4MB ROM</li>
                             <li>USB Interface</li>
                             <li>Costs between INR 140 to INR 400 (or around 3-4 Euros) depending on where you get it from.</li>
@@ -276,7 +277,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h4>DB Schema</h4>
+                        <h4>DB Table Schema</h4>
                         <img src="static/img/db.png" />
                     </section>
                     <section>
@@ -291,7 +292,8 @@
                         <h4>Position</h4>
                         <ul>
                             <li><span class="code-snippet">m:n.x</span>, where m = column start, n = column end, x = row.</li>
-                            <li>Initial indexing is tedious, but I don't need to be organized later.</li>
+                            <li>Indexing books the first time was difficult, but now I can place books anywhere and the bookshelf can remember them.</li>
+                            <li>The shelf enables my lack of organization.</li>
                         </ul>
                     </section>
                 </section>
@@ -344,6 +346,10 @@
                         </ul>
                     </section>
                     <section>
+                        <h4>Voice Server Architecture</h4>
+                        <img src="static/img/arch-complete.png" />
+                    </section>
+                    <section>
                         <h4>Code</h4>
                         <a href="https://github.com/bookshelfie/shelfie-voice/blob/master/shelfie_voice/extensions/ask.py" target="_blank"><img height="500px" src="static/img/flask_ask.png"></a>
                     </section>
@@ -380,8 +386,12 @@
                         <!-- <h4>Shelfie: Finding a Book When You Own 1500</h4>
                             <iframe width="860" height="520" data-src="https://www.youtube.com/embed/T3VgZJxRrww?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
                     </section>
+                    <section>
+                        <b>Finding a single book</b>
+                        <iframe width="860" height="520" data-src="https://www.youtube.com/embed/zp9BLR_rlHM?autoplay=1&loop=1"></iframe>
+                    </section>
                     <section class="fragments">
-                        <h4>What if there are books <em>behind books</em>?</h4>
+                        <h4>What if there are books <em>behind</em> books?</h4>
                         <p class="fragment">I'm glad you asked.</p>
                         <iframe width="860" class="fragment" height="520" data-src="https://www.youtube.com/embed/T41r5FyYdoI?autoplay=1&loop=1"></iframe>
                     </section>
