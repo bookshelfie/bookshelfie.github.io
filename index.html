@@ -469,17 +469,25 @@
                         <h2>You <em><code class="fragment highlight-green">curl</code></em> for books?</h2>
                         <p class="fragment fade-in">That's <em>boring!</em></p>
                         <p class="fragment">Not <em>exactly.</em></p>
-                        <p class="fragment">I said I wanted to <em>ask</em> my bookshelves for books.</p>
+                        <p class="fragment fragments">I said I wanted to <em class="fragment highlight-red">ask</em> my bookshelves for books.</p>
+                        <p class="fragment">So, I added another service.</p>
                     </section>
                 </section>
                 <section>
                     <section>
                         <h2>Shelfie Voice</h2>
                         <img src="static/img/memes/its-alive.jpeg">
+                        <aside class="notes">This is where I do my Dr. Frankenstein laugh. I'm less of a Tony Stark and more of a Dr. Victor Frankenstein at this point</aside>
                     </section>
                     <section class="fragments">
                         <h4 class="fragment">Enter Alexa</h4>
                         <img class="fragment" height="250px" src="static/img/logo/alexa.jpg" />
+                        <aside class="notes">
+                            I've evaluated 3 voice engines, and of them all, Alexa has proved to be the easiest to work with.
+                            Although I have to admit, I want to try something else to make this entirely local.
+                            The main problem with open source and locally hosted text to voice engines is the rendering.
+                            Nothing beats Amazon or Google servers in that regard to natural tones. I mean, you should listen to what it can really do.
+                        </aside>
                     </section>
                     <section>
                         <h4>Building a Voice API with Flask</h4>
@@ -488,23 +496,49 @@
                             <li>To run on a local server with access to the other API, use with <span class='code-snippet'>ngrok</span>.</li>
                             <li>Can also be configured on AWS, if you want to avoid buying a Raspberry Pi cluster. (Why would you do that?)</li>
                         </ul>
+                        <aside class="notes">
+                            Unsurprisingly, there's an extension for flask that talks to Alexa's servers.
+                            It works really well, and you can configure it on AWS as well. But I wanted to run it locally since it had to communicate with my other API.
+                            And that went really well!
+                        </aside>
                     </section>
                     <section>
                         <h4>Voice Server Architecture</h4>
                         <img src="static/img/arch-complete.png" />
+                        <aside class="notes">
+                            So now remember that architecture? This is the complete diagram as of today. I have an Alexa skill that talks to my main application.
+                            And this is how the user uses Shelfie. They do not need to use a web UI, and god forbid I have to write any more CSS other than the CSS
+                            I had to write for this presentation!
+                        </aside>
                     </section>
                     <section>
                         <h4>Code</h4>
                         <a href="https://github.com/bookshelfie/shelfie-voice/blob/master/shelfie_voice/extensions/ask.py" target="_blank"><img height="500px" src="static/img/flask_ask.png"></a>
+                        <aside class="notes">
+                            The code is fairly simple. Alexa deals with what is called an intent. Depending on how you configure the online skill, alexa
+                            asks your server for an intent so you need to provide them. This is done through the decorator. Note the intent name is BookFinderIntent.
+                            Your function operates like a flask view, only you return a statement. Something for Alexa to respond with.
+                            Given flasks async-less operation, this is actually a slow process btw.
+                        </aside>
                     </section>
                     <section>
                         <h4>Amazon Developer Page: Configuring The Skill</h4>
                         <img src="static/img/alexa_intent.png">
+                        <aside class="notes">
+                            This is the page you get to configure your skill. The intent is named exactly the same here as well. It is case sensitive.
+                            You get to configure the invoke phrase for your skill as well. In my case it is "ask my bookshelf", and this is triggered after I say "alexa".
+                        </aside>
                     </section>
                     <section>
                         <h4>Amazon Developer Page: Configuring The Query Variable</h4>
                         <img src="static/img/intent_variable.png">
                         <p>Protip: When you want a raw string: use <span class='code-snippet'>AMAZON.SearchQuery</span></p>
+                        <aside class="notes">
+                            The query variable is the fun bit. This is what is passed as named argument to your function.
+                            Yes, *named* keyword argument, so the name
+                            you use here is the same name you have to use in the function. I'm stress on this because I messed it up and spent an hour debugging why book was None.
+                            Also, the raw string thing.
+                        </aside>
                     </section>
                     <section>
                         <h4>Caveats</h4>
@@ -514,11 +548,15 @@
                             <li>Other libraries to consider: AWS's own library for Alexa.</li>
                             <li><span class='code-snippet'>Flask_Ask</span> is poorly packaged. Has dependencies locked to older versions of <span class='code-snippet'>cryptography</li>
                         </ul>
+                        <aside class="notes">
+                            Running your own alexa skill locally relies on a lot of hacks. Suprisingly documented hacks. There are a lot of articles on this.
+                        </aside>
                     </section>
                 </section>
                 <section id="demo">
                     <section>
                         <h2>Now Presenting: Shelfie, The Bookshelf Search Engine</h2>
+                        <aside class="notes">Now you get the final result.</aside>
                     </section>
                     <section>
                         <h4>Finding a collection</h4>
@@ -551,6 +589,15 @@
                             <li>Dialogue flow for Alexa skills.</li>
                             <li>Use spacy for NLP</li>
                         </ul>
+                        <aside class="notes">
+                            All of the work you saw in the last few slides, are features I have added over the last few weeks. The flask API took a day to write, and several days to improve. The micropython code took a few days to tweak into its current, productionized state. And the voice api took the better part of a day to write. The toughest parts were mostly the micropython and alexa bits. If you're writing a flask CRUD api, just google Miguel Grinberg and
+                            you'll be up to speed in no time.
+                            The features I want to add are a chatbot, so I can scan ISBNs and catalogue them. The telegram API is super sweet and sssh it's a Flask extension too.
+                            I also want to write a web UI, even though I hate doing front end work.
+                            I would love to do some analytics, which is why I'm contemplating a changes table to record where my books have been and read counts.
+                            And most importantly, I want to use spacy for NLP so I can build dialogue with Alexa. I want connected, coherent responses, not the hack I have right
+                            now.
+                        </aside>
                     </section>
                     <section>
                         <h2>Challenges to a MicroPython Project</h2>
@@ -560,7 +607,38 @@
                             <li class="fragment">Need some competence with electronics.</li>
                             <li class="fragment">Procuring components (depends on location)</li>
                         </ul>
+                        <aside class="notes">
+                            When I started this project 18 months ago, I did not know most of this stuff. I knew Python, flask and that micropython was a thing.
+                            Things changed while doing this project, and I feel that the time I spent on it is a labour of love.
+                            That being said, it was both easy and not easy.
+                            I didn't find good material especially on the micropython end.
+                            And I didn't find any impressive projects that people had made using it. Just a few hobby projects, but nothing... production grade.
+                            That is why Shelfie has deployment scripts. It has systemctl files for the WSGI server sitting in front of the flask API and the alexa voice skill.
+                            It uses a service for ngrok as well, and there's an nginx server that balances the load.
+                            I did this because when I originally thought of Shelfie I didn't know coding. I was not a developer back then.
+                        </aside>
                     </section>
+                </section>
+                <section>
+                    <h2>Vinay Keerthi</h2>
+                    <h4>@stonecharioteer</h4>
+                    <a href="https://stonecharioteer.com">stonecharioteer.com</a>
+                    <aside class="notes">
+                        This is the intro I said that will come at the end. I am Vinay Keerthi, and I am a self-taught programmer.
+                        I did my undergrad in Mechanical Engineering. I have no formal training in Computer Science or electronics. In fact,
+                        I hated studying electronics! <br />
+                        After college, I worked as a Production Engineer at a plant that manufactured ignition coils
+                        for motorcycles. While working there, I was in charge of the tools and we had an elaborate system of finding tools. But nothing
+                        accounted for people putting tools in the wrong place. Everyone blamed the operators. I wondered why the system didn't allow disarray.
+                        I had the same problem with my bookshelf. I would organize my shelves, and the moment I took a book out
+                        and put it somewhere else, my system failed.
+                        <br />That was not an easy system to use.
+                        <br />I learnt Python in the years since and once I discovered MicroPython, I realized I could try something out.
+                        <br />This is that something. Shelfie allows me to pick up a book and not have to put it back into a hardcoded spot. <br />One day I will say "Alexa, ask my bookshelf where I should keep this book", and my bookshelf will light up and say "here you go, that book will fit here. I'll remember where it is."
+                        <br />
+                        That day isn't too far off imo.
+                        Thank you.
+                    </aside>
                 </section>
                 <section>
                         <h2>Links</h2>
