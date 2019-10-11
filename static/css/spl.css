@@ -2,7 +2,6 @@ img {
     border: 0px !important;
 }
 
-
 .img-grid {
     display: flex;
     margin: 0;
@@ -20,8 +19,23 @@ img.bookshelves {
     font-size: 18px;
 }
 
-.img-grid img {
-    width: 280px;
+.img-grid.spl {
+    padding: 0;
+    margin: 0;
+}
+
+
+.img-grid.spl img {
+    max-width: 220px;
+
+}
+.img-grid.spl img.spl {
+    /* max-width:230px; */
+    max-width: 315px;
+    width: 300px;
+    /* height: auto; */
+    padding: 0;
+    margin: 0;
 }
 
 img.tech {
@@ -129,7 +143,7 @@ span.code-snippet {
 
 div.title {
     padding: 2rem;
-    height: 30vh;
+    height: 40vh;
     background-image: url("../img/books_bg.jpeg");
     background-size: cover;
     box-shadow: 1rem 0.7rem 0.5rem;
@@ -151,6 +165,17 @@ div.title.image-container > h4.main-subtitle {
     mix-blend-mode: screen;
     padding: 1rem;
 }
+
+div.title.image-container > p.about-me {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 2rem;
+    background-color: #fff;
+    mix-blend-mode: screen;
+    padding: 0.2rem;
+}
+
+
 
 
 section.wip  p.wip {
