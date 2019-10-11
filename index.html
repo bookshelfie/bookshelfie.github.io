@@ -42,20 +42,10 @@
                             Building a Physical Inventory Search Engine
                         </h4>
                         <p class="about-me">
-                            Vinay Keerthi
+                            Vinay Keerthi <br />
                         </p>
+                        <p id="link"></p>
                     </div>
-                    <!-- <p class='tiny'>
-                        Sr. Software Engineer, <i class="fa fa-cc-visa"></i><br />
-                        PyCon India 2019 <br/>
-                    </p> -->
-                    <hr >
-                    <div id="about-me-links">
-                        <a href="https://bookshelfie.github.io">
-                            <i class="fa fa-book fa-fw"></i> bookshelfie.github.io
-                        </a>
-                    </div>
-
                     <aside class="notes">
                         Hello, I am Vinay Keerthi, and I am going to talk about Shelfie, a Micropython powered physical inventory search engine.
 0                    </aside>
@@ -721,6 +711,9 @@
                 ]
             });
 
+        </script>
+        <script>
+            document.getElementById("link").innerHTML = `<a href="${window.location.origin}"><i class="fa fa-book fa-fw"></i> ${window.location.origin}</a>`
         </script>
 
     </body>

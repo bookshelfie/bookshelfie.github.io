@@ -143,7 +143,7 @@ span.code-snippet {
 
 div.title {
     padding: 2rem;
-    height: 40vh;
+    height: 50vh;
     background-image: url("../img/books_bg.jpeg");
     background-size: cover;
     box-shadow: 1rem 0.7rem 0.5rem;
@@ -175,7 +175,14 @@ div.title.image-container > p.about-me {
     padding: 0.2rem;
 }
 
-
+div.title.image-container > p#link {
+    /* text-transform: capitalize; */
+    color: #000;
+    font-size: 2rem;
+    background-color: #fff;
+    mix-blend-mode: screen;
+    padding: 0.2rem;
+}
 
 
 section.wip  p.wip {
