@@ -51,20 +51,14 @@
                     </p>
                     <hr >
                     <div id="about-me-links">
-                        <a href="https://gitlab.com/user/stonecharioteer">
-                            <i class="fa fa-github fa-fw"></i> https://github.com/stonecharioteer
-                        </a>
                         <a href="https://bookshelfie.github.io">
-                            <i class="fa fa-book fa-fw"></i> https://bookshelfie.github.io
-                        </a>
-                        <a href="https://stonecharioteer.com">
-                            <i class="fa fa-globe fa-fw"></i> https://stonecharioteer.com
+                            <i class="fa fa-book fa-fw"></i> bookshelfie.github.io
                         </a>
                     </div>
 
                     <aside class="notes">
-                        Remember: introduction at the end. Say something like "Hello! My name is Vinay Keerthi and I will be talking to you about Shelfie, my bookshelf that runs on MicroPython"
-                    </aside>
+                        Hello, I am Vinay Keerthi, and I am going to talk about Shelfie, a Micropython powered physical inventory search engine.
+0                    </aside>
                 </section>
                 <section id='intro'>
                     <section>
@@ -325,7 +319,7 @@
                             <li>Raspberry Pi 3B+: 1 Nos.</li>
                             <li>Raspberry Pi Zero W: 4 Nos.</li>
                             <li>Raspberry Pi Cluster Hat v2.2: 1 No.</li>
-                            <li>WS2818B Addressable RGB LED Strips: 10 meter</li>
+                            <li>WS2812B Addressable RGB LED Strips: 10 meter</li>
                         </ul>
                         <aside class="notes">
                             What did I need to get started with this project: the following.
@@ -367,6 +361,24 @@
                         <aside class="notes">
                             This is an example of how the nodemcu responds when I write a message to the topic it is subscribed to. I have 3 topics, labelled
                             according to the shelf. The chip, on receiving the payload processes it according to the topic, and responds, running a predetermined python function.
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>WS2812B LED Strips</h4>
+                        <img src="static/img/hardware/neopixel_control_leds_micropython.png" />
+                        <aside class="notes">
+                            The WS2812B LED strips are amazing for use with projects like these. You'll find
+                            resources that call these strips NeoPixels, because that is how they are usually
+                            sold by hobby shops online. The NeoPixels have 3 inputs, one 3.3V, a ground and an input signal. So it can be controlled by a single input into the string,
+                            passing an index indicating the LED that you want to highlight, and an RGB tuple.
+                            The ESP outputs 5V so you'll have to use what is called a load shifter in your circuit.
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>WS2812B LED Strips control</h4>
+                        <img src="static/img/hardware/neopixel_circuit.png" />
+                        <aside class="notes">
+                            These strips can be easily controlled by the neopixel library in micropython.
                         </aside>
                     </section>
                 </section>
@@ -568,7 +580,7 @@
                             <iframe width="860" height="520" data-src="https://www.youtube.com/embed/T3VgZJxRrww?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
                     </section>
                     <section>
-                        <b>Finding a single book</b>
+                        <h4>Finding a single book</h4>
                         <iframe width="860" height="520" data-src="https://www.youtube.com/embed/zp9BLR_rlHM?autoplay=1&loop=1"></iframe>
                     </section>
                     <section class="fragments">

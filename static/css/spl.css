@@ -20,6 +20,10 @@ img.bookshelves {
     font-size: 18px;
 }
 
+.img-grid img {
+    width: 280px;
+}
+
 img.tech {
     margin: 0.5rem!important;
     width: 500px;
@@ -74,11 +78,12 @@ p.tiny#about-me {
 
 div#about-me-links {
     display: flex;
-    flex-direction: column;
-    width: 40%;
+    /* flex-direction: column; */
+    /* width: 40%; */
+    font-size: 0.3rem;
     margin: 0 30%;
     justify-content: center;
-    align-content: center
+    /* align-content: center */
 }
 
 div#about-me-links > a {
