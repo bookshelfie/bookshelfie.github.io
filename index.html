@@ -711,7 +711,11 @@
 
         </script>
         <script>
-            document.getElementById("link").innerHTML = `<a href="${window.location.origin}"><i class="fa fa-book fa-fw"></i> ${window.location.origin}</a>`
+            var link = window.location.origin;
+            if ((link.indexOf("github") == -1) & (link.indexOf("gitlab") == -1)) {
+                link = "https://bookshelfie.github.io"
+            }
+            document.getElementById("link").innerHTML = `<a href="${link}"><i class="fa fa-book fa-fw"></i> ${link}</a>`
         </script>
 
     </body>
